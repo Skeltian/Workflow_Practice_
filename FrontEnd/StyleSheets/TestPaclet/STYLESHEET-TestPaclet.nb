@@ -1712,7 +1712,7 @@ the same name."],
     RGBColor[1, 1, 1], Background -> RGBColor[0.921569, 0.92549, 0.929412], 
     FontFamily -> "Crimson Roman", FontColor -> 
     RGBColor[0.211765, 0.219608, 0.298039]], 
-   Cell["T   E   C   H   N   O   L   O   G   Y", "SBO", 
+   Cell["THIS IS A TEST STYLESHEET", "SBO", 
     CellMargins -> {{0, 0}, {0, 0}}, FontFamily -> "Crimson Roman", FontSize -> 
     12, FontSlant -> "Plain", FontColor -> RGBColor[1, 1, 1], TextAlignment -> 
     Center, Background -> 
