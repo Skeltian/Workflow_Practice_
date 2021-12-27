@@ -11,7 +11,7 @@ jobs:
         
       - name: "Create the paclet file"
         run: |
-          $FILES = @(Get-ChildItem -Path './');
+          $FILES = @(Get-ChildItem -Path './') | Where-Object {$_ -notlike ".github"};
           foreach ($file in $FILES) {
             wolframscript -code "CreatePacletArchive[`"./$file`"]";
             Move-Item -Path "./$file-1.0.0.paclet" -Destination "./$file/Paclets/$file-1.0.0.paclet"
