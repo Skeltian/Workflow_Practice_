@@ -13,9 +13,9 @@ jobs:
         run: |
           $FILES = @(Get-ChildItem -Path './');
           foreach ($file in $FILES) {
-            wolframscript -code 'CreatePacletArchive[\"./$file\"]';
-            Move-Item -Path ./$file-1.0.0.paclet -Destination ./$file/Paclets/$file-1.0.0.paclet
-            wolframscript -code 'PacletManager`BuildPacletSiteFiles[\"./$file\"]'
+            wolframscript -code "CreatePacletArchive[`"./$file`"]";
+            Move-Item -Path "./$file-1.0.0.paclet" -Destination "./$file/Paclets/$file-1.0.0.paclet"
+            wolframscript -code "PacletManager`BuildPacletSiteFiles[`"./$file`"]"
           }
         
       - name: "Commit the files"
