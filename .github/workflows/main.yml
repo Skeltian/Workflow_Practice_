@@ -1,0 +1,25 @@
+name: "Paclet Site Generation TEST"
+
+on: [workflow_dispatch]
+
+jobs:
+  job:
+    runs-on: [self-hosted]
+    steps:
+      - name: "Checkout my repository"
+        uses: actions/checkout@v2
+        
+      - name: "Create the paclet file"
+        run: wolframscript -code 'CreatePacletArchive[\"./TestPaclet/\"]'
+        
+      - name: "Move the file to 'Paclets' directory"
+        run: Move-Item -Path ./TestPaclet-1.0.0.paclet -Destination ./TestPaclet/Paclets/TestPaclet-1.0.0.paclet
+      
+      - name: "Create the Paclet Site file"
+        run: wolframscript -code 'PacletManager`BuildPacletSiteFiles[\"./TestPaclet/\"]'
+        
+      - name: "Commit the file"
+        run: |
+          git add *
+          git commit -m "Auto-generated and handled the PacletSite creation"
+          git push -u origin
