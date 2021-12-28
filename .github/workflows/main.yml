@@ -11,7 +11,7 @@ jobs:
         
       - name: "Create the paclet file"
         run: |
-          $FILES = @(Get-ChildItem -Path './') | Where-Object {$_ -notlike ".github"};
+          $FILES = @(Get-ChildItem -Path './') | Where-Object {$_ -notlike ".github" -or $_ -notlike "Resources_"};
           wolframscript -script "./Resources_/Scripts_/PacletBuilder.wls" $FILES
         
       - name: "Commit the files"
