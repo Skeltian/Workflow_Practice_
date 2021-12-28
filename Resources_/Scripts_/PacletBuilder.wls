@@ -2,9 +2,9 @@
 
 argv = Rest @ $ScriptCommandLine;
 loc = NotebookDirectory[];
-SetDirectory[loc];
-SetDirectory["../../"];
+SetDirectory["../"];
 Print[Directory[]];
+(*
 Map[
 (
 	CreatePacletArchive["./" <> #];
@@ -14,3 +14,4 @@ Map[
 )&,
 
 argv]
+*)
