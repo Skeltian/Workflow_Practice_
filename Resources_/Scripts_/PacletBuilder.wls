@@ -2,10 +2,13 @@
 
 argv = Rest @ $ScriptCommandLine;
 Map[
+Module[{lvPaclet},
 (
 	CreatePacletArchive["./" <> #];
-	RenameFile["./" <> # <> "-1.0.0.paclet", "./" <> # <> "/Paclets/" <> # <> "-1.0.0.paclet", OverwriteTarget -> True];
+	lvPaclet = First[FileNames["*.paclet"]];
+	RenameFile[lvPaclet, "./" <> # <> "/Paclets/" <> lvPaclet, OverwriteTarget -> True];
 	PacletManager`BuildPacletSiteFiles["./" <> #]
-)&,
+)
+]&,
 
 argv]
