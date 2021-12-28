@@ -1,7 +1,6 @@
 #!/usr/bin/env wolframscript
 
 argv = Rest @ $ScriptCommandLine;
-(*
 Map[
 (
 	CreatePacletArchive["./" <> #];
@@ -11,4 +10,3 @@ Map[
 )&,
 
 argv]
-*)
