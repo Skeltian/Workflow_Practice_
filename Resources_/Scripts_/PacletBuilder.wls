@@ -4,7 +4,7 @@ argv = Rest @ $ScriptCommandLine;
 Map[
 (
 	CreatePacletArchive["./" <> #];
-	RenameFile["./" <> # <> "-1.0.0.paclet", "./" <> # <> "/Paclets/" <> # <> "-1.0.0.paclet"];
+	RenameFile["./" <> # <> "-1.0.0.paclet", "./" <> # <> "/Paclets/" <> # <> "-1.0.0.paclet", OverwriteTarget -> True];
 	PacletManager`BuildPacletSiteFiles["./" <> #]
 )&,
 
