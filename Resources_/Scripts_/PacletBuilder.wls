@@ -17,7 +17,7 @@ Module[{lvNewPaclet, lvOldPaclets = FileNames["./" <> # <> "/Paclets/*.paclet"]}
 	    {lvPacletInfo = InputForm[Import["./" <> # <> "/PacletInfo.m"]], lvVersion, lvNewVersion},
 		lvVersion = StringReplace[StringSplit[First[StringCases[ToString[lvPacletInfo], "\"Version\"" ~~ __]], {" -> ", ","}][[2]], "\"" -> ""];
 		lvNewVersion = StringRiffle[ReplacePart[StringSplit[lvVersion, "."], 3 -> (Interpreter["Number"][StringSplit[lvVersion, "."][[3]]] + 1)], "."];
-		ToExpression[StringReplace[ToString[lvPacletInfo], lvVersion -> lvNewVersion]] >> ("./" <> # <> "/PacletInfo.m")
+		Put[ToExpression[StringReplace[ToString[lvPacletInfo], lvVersion -> lvNewVersion]], ("./" <> # <> "/PacletInfo.m")]
 	];
 	
 	(* Create the Paclet *)
