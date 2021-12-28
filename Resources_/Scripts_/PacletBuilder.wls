@@ -1,6 +1,10 @@
 #!/usr/bin/env wolframscript
 
 argv = Rest @ $ScriptCommandLine;
+loc = NotebookDirectory[];
+SetDirectory[loc];
+SetDirectory["../../"];
+Print[Directory[]];
 Map[
 (
 	CreatePacletArchive["./" <> #];
