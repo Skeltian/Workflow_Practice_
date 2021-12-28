@@ -7,7 +7,7 @@ Module[{lvNewPaclet, lvOldPaclets = FileNames["./" <> # <> "/Paclets/*.paclet"]}
 	(* Move the old paclets to Archived_/ *)
 	If[Length[lvOldPaclets] > 0,
 		Map[
-		RenameFile[#, "./" <> StringSplit[#, "\\"][[2]] <> "/Archived_/" <> Last[StringSplit[#, "\\"]]]&,
+		RenameFile[#, "./" <> StringSplit[#, "\\"][[2]] <> "/Archived_/" <> Last[StringSplit[#, "\\"]], OverwriteTarget -> True]&,
 		
 		lvOldPaclets]
 	];
