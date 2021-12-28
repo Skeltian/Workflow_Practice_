@@ -1,9 +1,6 @@
 #!/usr/bin/env wolframscript
 
 argv = Rest @ $ScriptCommandLine;
-loc = NotebookDirectory[];
-SetDirectory["../"];
-Print[Directory[]];
 (*
 Map[
 (
