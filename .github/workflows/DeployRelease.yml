@@ -23,3 +23,14 @@ jobs:
           git add *
           git commit -m "Auto-generated and handled the PacletSite creation"
           git push -u origin
+  job2:
+    runs-on: [self-hosted]
+    needs: [job]
+    steps:
+      - name: "Checkout repo"
+        uses: actions/checkout@v2
+      - name: "Create release"
+        uses: ncipollo/release-action@v1
+        with:
+          repo: "master"
+          generateReleaseNotes: true
