@@ -24,7 +24,7 @@ jobs:
           git commit -m "Auto-generated and handled the PacletSite creation"
           git push -u origin
   job2:
-    runs-on: [self-hosted]
+    runs-on: ubuntu-latest
     needs: [job]
     steps:
       - name: "Checkout repo"
@@ -39,7 +39,7 @@ jobs:
           WITH_V: true
           DEFAULT_BUMP: 'major'
   job3:
-    runs-on: [self-hosted]
+    runs-on: ubuntu-latest
     needs: [job2]
     steps:
       - name: "Checkout repo"
