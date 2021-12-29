@@ -1,4 +1,4 @@
-Paclet["Name" -> "01Technology", "Version" -> "1.0.12", 
+Paclet["Name" -> "01Technology", "Version" -> "2.0.0", 
  "Creator" -> "Brandon Sutton <bsutton10294@gmail.com", 
  "Description" -> "Test paclet created for testing Github Action workflow", 
  "Extensions" -> {{"Kernel", "Root" -> ".", "Context" -> {"Technology`"}}, 
