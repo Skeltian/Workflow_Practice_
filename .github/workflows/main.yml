@@ -1,6 +1,9 @@
-name: "Paclet Site Generation TEST"
+name: "Deploy testing environment"
 
-on: [push]
+on:
+  push:
+    branches:
+      - main
 
 jobs:
   job:
