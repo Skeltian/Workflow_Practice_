@@ -1,0 +1,1757 @@
+(* Content-type: application/vnd.wolfram.cdf.text *)
+
+(*** Wolfram CDF File ***)
+(* http://www.wolfram.com/cdf *)
+
+(* CreatedBy='WolframFinancePlatform 12.1' *)
+
+(*************************************************************************)
+(*                                                                       *)
+(*                                                                       *)
+(*  This file was created under the Wolfram Enterprise licensing terms.  *)
+(*                                                                       *)
+(*       For additional information concerning CDF licensing see:        *)
+(*                                                                       *)
+(*        www.wolfram.com/cdf/adopting-cdf/licensing-options.html        *)
+(*                                                                       *)
+(*                                                                       *)
+(*                                                                       *)
+(*************************************************************************)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[      1075,         20]
+NotebookDataLength[     92924,       1734]
+NotebookOptionsPosition[     92971,       1726]
+NotebookOutlinePosition[     93603,       1747]
+CellTagsIndexPosition[     93560,       1744]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[StyleData[StyleDefinitions -> FrontEnd`FileName[{$HomeDirectory, 
+   "AppData", "Roaming", "WolframFinancePlatform", "SystemFiles", "FrontEnd", 
+   "StyleSheets", "CentCoreNotebook.nb"}]],ExpressionUUID->"db0d4a6e-538d-\
+42e6-a22d-9e029b795685"],
+
+Cell[StyleData[All, "Working"],
+ NotebookEventActions->{"WindowClose" :> If[
+     And[$CloudUserID =!= None, 
+      Or[
+       And[Length[
+          Notebooks[]] == 2, Length[
+          Notebooks["Messages"]] > 0], 
+       And[Length[
+          Notebooks[]] == 1, Length[
+          Notebooks["Messages"]] == 0]]], 
+     Module[{lvCe = Module[{lvEmployeesDataset = Dataset[
+            CloudExpression[
+            "https://www.solomon.lab.centcorp.tech/obj/solomon/\
+CloudExpression/DATA-Employees"][All]], lvIndexDataset = Dataset[
+            CloudExpression[
+            "https://www.solomon.lab.centcorp.tech/obj/solomon/\
+CloudExpression/DATA-Index"][All]]}, 
+         lvEmployeesDataset[All, 
+          Association[
+           Map[lvIndexDataset[
+              ToExpression[#]]["Question"] -> #& , 
+            DeleteDuplicates[
+             Flatten[
+              Normal[
+               Keys[lvEmployeesDataset]]]]]]]], lvGroups, lvIndex, 
+       lvUserGroups = {}}, CreateDialog[{
+         TextCell["Application closing..."], 
+         Spacer[{300, 10}]}, WindowTitle -> 
+        "Logging out of cloud before closing application...", TextAlignment -> 
+        Center]; SetOptions[$FrontEnd, 
+        AutoOpenPalettes -> {"CENT_\\Login.nb"}]; lvGroups = Select[
+         Flatten[
+          Keys[
+           Normal[
+            Part[lvCe, 1]]]], StringContainsQ[#, "FA-"]& ]; lvIndex = Part[
+         Flatten[
+          Position[
+           lvCe[All], $CloudUserID]], 1]; KeyValueMap[If[#2, 
+         AppendTo[lvUserGroups, 
+          Part[
+           StringSplit[#, "FA-"], 1]]]& , 
+        Normal[
+         lvCe[lvIndex, lvGroups]]]; 
+      CloudDisconnect[]; $CloudBase = "https://www.wolframcloud.com/"; 
+      Map[Quiet[
+         PacletUninstall[
+          StringJoin[
+           StringTake[
+            ToString[#], 2], "*"]]]& , lvUserGroups]; Pause[3]; 
+      Map[NotebookClose[#]& , 
+        Notebooks[]]]]},
+ DockedCells->{
+   Cell[
+    BoxData[
+     TagBox[
+      GridBox[{{
+         ItemBox[
+          TemplateBox[{
+            GraphicsBox[
+             TagBox[
+              RasterBox[CompressedData["
+1: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
+               "], {{0, 60.}, {60., 0}}, {0, 255}, ColorFunction -> RGBColor, 
+               ImageResolution -> {120., 120.}], 
+              BoxForm`ImageTag[
+              "Byte", ColorSpace -> "RGB", Interleaving -> True], Selectable -> 
+              False], DefaultBaseStyle -> "ImageGraphics", 
+             ImageSizeRaw -> {60., 60.}, PlotRange -> {{0, 60.}, {0, 60.}}], 
+            TemplateBox[{28}, "Spacer1"], 
+            TagBox[
+             GridBox[{{
+                TemplateBox[{0, 28}, "Spacer2"]}, {
+                
+                DynamicModuleBox[{$CellContext`toOffset$$, \
+$CellContext`makeActionMenuList$$, $CellContext`updateMenu$$, \
+$CellContext`menu$$ = ActionMenu["Notebook Outline", {Row[{"", 
+                    Style[
+                    "Hello world! This is a long sentence. \
+DSADSADASDASDASDSADA. \
+bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb\
+bb", "Title", FontSize :> CurrentValue["ControlsFontSize"], 
+                    CellChangeTimes -> {{3.8455573213674583`*^9, 
+                    3.8455573233727417`*^9}, {3.8455671463049955`*^9, 
+                    3.845567152467295*^9}, {3.8455681662268133`*^9, 
+                    3.8455681706986856`*^9}}, Background -> None, FontColor -> 
+                    RGBColor[0, 0, 0]]}] :> (SelectionMove[
+                    Notebooks[
+                    CellObject[63761]], After, Notebook, AutoScroll -> True]; 
+                    SelectionMove[
+                    CellObject[63761], All, Cell, AutoScroll -> True]), 
+                    Row[{"    ", 
+                    Style[
+                    "This is a test", "Subtitle", FontSize :> 
+                    CurrentValue["ControlsFontSize"], 
+                    CellChangeTimes -> {{3.8455573248737326`*^9, 
+                    3.845557326159483*^9}}, Background -> None, FontColor -> 
+                    RGBColor[0, 0, 0]]}] :> (SelectionMove[
+                    Notebooks[
+                    CellObject[63777]], After, Notebook, AutoScroll -> True]; 
+                    SelectionMove[
+                    CellObject[63777], All, Cell, AutoScroll -> True])}]}, 
+                 TagBox[
+                  DynamicBox[
+                   ToBoxes[$CellContext`menu$$, StandardForm]], 
+                  
+                  EventHandlerTag[{
+                   "MouseEntered" :> ($CellContext`menu$$ = \
+$CellContext`updateMenu$$[]), Method -> "Preemptive", PassEventsDown -> 
+                    Automatic, PassEventsUp -> True}]], 
+                 DynamicModuleValues :> {{
+                   DownValues[$CellContext`toOffset$$] = {HoldPattern[
+                    $CellContext`toOffset$$[{{
+                    PatternTest[
+                    Pattern[$CellContext`n, 
+                    Blank[]], NumberQ], 
+                    Blank[]}, 
+                    Blank[]}]] :> $CellContext`n, HoldPattern[
+                    $CellContext`toOffset$$[{
+                    PatternTest[
+                    Pattern[$CellContext`n, 
+                    Blank[]], NumberQ], 
+                    Blank[]}]] :> $CellContext`n, HoldPattern[
+                    $CellContext`toOffset$$[
+                    PatternTest[
+                    Pattern[$CellContext`n, 
+                    Blank[]], NumberQ]]] :> $CellContext`n, HoldPattern[
+                    $CellContext`toOffset$$[
+                    BlankNullSequence[]]] :> Inherited}}, {
+                   DownValues[$CellContext`makeActionMenuList$$] = {
+                    HoldPattern[
+                    $CellContext`makeActionMenuList$$[
+                    Pattern[$CellContext`cells$, 
+                    Blank[]]]] :> 
+                    Module[{$CellContext`offsets$, $CellContext`offsetNums$, \
+$CellContext`max$, $CellContext`min$, $CellContext`rng$, \
+$CellContext`scaled$, $CellContext`spacings$, $CellContext`bg$, \
+$CellContext`styled$}, $CellContext`offsets$ = Subtract[
+                    Map[$CellContext`toOffset$$, 
+                    CurrentValue[$CellContext`cells$, CellMargins]], 
+                    Map[$CellContext`toOffset$$, 
+                    
+                    CurrentValue[$CellContext`cells$, 
+                    FontSize]]]; $CellContext`offsetNums$ = 
+                    Select[$CellContext`offsets$, NumberQ]; $CellContext`max$ = 
+                    Max[$CellContext`offsetNums$, 0]; $CellContext`min$ = 
+                    Min[$CellContext`offsetNums$, 100]; $CellContext`rng$ = 
+                    Replace[$CellContext`max$ - $CellContext`min$, Except[
+                    PatternTest[
+                    Blank[], Positive]] -> 1]; $CellContext`scaled$ = 
+                    Replace[$CellContext`offsets$, {PatternTest[
+                    Pattern[$CellContext`n$, 
+                    Blank[]], 
+                    NumberQ] :> ($CellContext`n$ - \
+$CellContext`min$)/$CellContext`rng$, Blank[] :> 1}, {
+                    1}]; $CellContext`spacings$ = 
+                    ReplaceAll[$CellContext`scaled$, 
+                    MapIndexed[# -> First[#2] - 1& , 
+                    Union[$CellContext`scaled$]]]; $CellContext`bg$ = 
+                    CurrentValue[
+                    EvaluationNotebook[], Background]; $CellContext`styled$ = 
+                    Replace[
+                    NotebookRead[$CellContext`cells$], {Cell[
+                    Pattern[$CellContext`a$, 
+                    Blank[String]], 
+                    Pattern[$CellContext`b$, 
+                    Blank[String]], 
+                    PatternTest[
+                    Pattern[$CellContext`c$, 
+                    BlankNullSequence[]], OptionQ]] :> 
+                    Style[$CellContext`a$, $CellContext`b$, FontSize :> 
+                    CurrentValue["ControlsFontSize"], $CellContext`c$, 
+                    Background -> $CellContext`bg$, FontColor -> 
+                    RGBColor[0, 0, 0]], Cell[
+                    Pattern[$CellContext`a$, 
+                    Blank[]], 
+                    Pattern[$CellContext`b$, 
+                    Blank[String]], 
+                    PatternTest[
+                    Pattern[$CellContext`c$, 
+                    BlankNullSequence[]], OptionQ]] :> RawBoxes[
+                    
+                    Cell[$CellContext`a$, $CellContext`b$, CellFrame -> None, 
+                    FontSize :> CurrentValue[
+                    "ControlsFontSize"], $CellContext`c$, 
+                    Background -> $CellContext`bg$, FontColor -> 
+                    RGBColor[0, 0, 0]]]}, {1}]; Apply[Row[{
+                    StringJoin[
+                    ConstantArray[" ", 4 #2]], #}] :> (SelectionMove[
+                    Notebooks[#3], After, Notebook, AutoScroll -> True]; 
+                    SelectionMove[#3, All, Cell, AutoScroll -> True])& , 
+                    
+                    Transpose[{$CellContext`styled$, $CellContext`spacings$, \
+$CellContext`cells$}], {1}]]}}, {
+                   DownValues[$CellContext`updateMenu$$] = {HoldPattern[
+                    $CellContext`updateMenu$$[]] :> If[
+                    FailureQ[
+                    Developer`NotebookInformation[
+                    EvaluationNotebook[]]], 
+                    ActionMenu["Notebook Outline", {}, Enabled -> False], 
+                    With[{$CellContext`cells$ = Cells[
+                    EvaluationNotebook[], CellStyle -> 
+                    Alternatives[
+                    "Title", "Subtitle", "Chapter", "Section", "Subsection", 
+                    "Subsubsection"]]}, 
+                    ActionMenu["Notebook Outline", 
+                    $CellContext`makeActionMenuList$$[$CellContext`cells$]]]]}\
+}}]}}, GridBoxAlignment -> {"Columns" -> {{Left}}}, DefaultBaseStyle -> 
+              "Column", 
+              GridBoxItemSize -> {
+               "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+             "Column"]}, "RowDefault"], Alignment -> Left, StripOnInput -> 
+          False], 
+         ItemBox[
+          DynamicBox[
+           ToBoxes[
+            Refresh[
+             Column[{
+               Style[
+                
+                DateString[{
+                 "DayName", ", ", "MonthName", " ", "Day", ", ", "Year"}], 
+                Bold], 
+               Style[
+                DateString[{"Hour12Short", ":", "Minute", " ", "AMPM"}], 
+                Bold]}, Alignment -> Center], UpdateInterval -> 60], 
+            StandardForm], 
+           ImageSizeCache -> {
+            195., {11.599999999999998`, 17.599999999999998`}}], 
+          Alignment -> {Center}, StripOnInput -> False], 
+         ItemBox[
+          TagBox[
+           GridBox[{{
+              StyleBox[
+              "\"Cloud Files\"", StripOnInput -> False, FontColor -> 
+               RGBColor[
+                0.21176470588235294`, 0.2196078431372549, 
+                 0.2980392156862745]]}, {
+              TemplateBox[{
+                ItemBox[
+                 ButtonBox[
+                 "\"Open\"", ButtonFunction :> If[$CloudUserID === None, 
+                    Print[
+                    "Please login to the Solomon cloud to update your \
+Paclets."], 
+                    CreateWindow[
+                    DialogNotebook[
+                    
+                    DynamicModule[{$CellContext`lvCloudDirectory = 
+                    If[$CloudRootDirectory === CloudDirectory[], 
+                    Select[
+                    CloudObjects[], StringMatchQ[
+                    Information[#, "DisplayName"], 
+                    Alternatives["Personal_", "Copied Files"]]& ], 
+                    CloudObjects[]]}, 
+                    Dynamic[
+                    Column[
+                    Join[{
+                    Row[{
+                    ImageResize[
+                    Image[CompressedData["
+1:eJztnE2M1VQYhuvPwsSNa+NGE6PEEI0RRI3JdeHCGDYYN8bNEEYyCwadQRBR
+O8AAUYPGGE3UGI0uXelCEZELKP5FwURd6JYY1y7RoZf3C98l5c5pb0/b03Pa
+vk/ykMydS3vO985pT39v3rx901NXR1G0eB3+2TSz66GFhZndj92AHx6fX5zb
+Oj+75ZH5HbNbZxc2bL4GH87CeXhtRAghhBBCCCGEEEIIIYQQQvrOcDi8Ht4E
+b4Fr4Fp4F7wb3gPXwfXwXrhBXe+73T3hCDwHz8ORwSTj8zyTOI53N9qL7nNj
+ZJ9DWSW/nQ31q6v8A/+LmsvsssjuuSY62FFWIg+ZpUyw77vDfTe7A/7eN0Z+
+M0uPvR2u+9sVUKtHowAyGzsYDI5g7N3uuNutB7m9FAWQ16Ro1zNOO95yUJ+5
+KICcTOrY437PAHKbiQLIKE+08Vl3FWgnqMmTUQDZFDAJSdRtj89jGKx7S+Q/
+k9bq69wP1rutbJvpJbEPvt++8tXQYybvfW+zmD8dta98NXQb7b3vbRa5nbAu
+fEV0++y97x2wUZhba3PjdrKdue2qse19tlGYWy2uWBe+Ii5zwzzrZ3gWnoG/
+pDyjn59N/V6++yP8Dp6G38BTMleDQ3gcfp3yeI0O1RPqSfWUKm35Fn6vntbf
+fwk/g+81mZlQZ25SexyDPtB0H/pIXfMSLGe58cb3mDpywzIONN/yflP1+A3/
+/6CHZveeGo67jeg9sHfK/lPWodc9XpDr63AJ7pNxCg/Bl+Er8FV4GL4GX4dv
+wDfh2/Bd+AH8CH6sfgjfh+/At/T7h3VZh3T5y3C/rk/ca3Bfyv0pl9UD6kHD
+Mvdqf8YspX92mNvzZTOTtpuWifnJ52WX2UHlWt1Sfgr2yDio0KZVILMvauhr
+56z7Wk/Z3Ez7NV4TyjWZloUNZXPD38+DhsWVeV6gN8ozL7lhWCBzBdv1Y1v4
+q2E5i77rEroyT5uWR1HK5GaaJ1XcT/bF2iiTW8aifNckaLXOtWE7TjLGGq+9
+lqhbFWxzwzb6PsNivNclcGudSwo2x92m+1/iS88e+q5L0Na9jRRscosN9+fG
+gT4XEpAXpqdgj+V5LhO+6xKyiV7frJ2iucWG+6l1X+u7NiHrZKwJFuPNhO+6
+hGwSO3x+tkhuGWOt9HWEnuhsrAlFjgNM22i57lSxX11WxprTZ/YK5JZ17OG7
+NiHrdKwJ03Lj3N9ap/u1MVPOT3Ks2XsBNX1iStkrk5dbxljjef8c44beXWWb
+22Aw+KloH3qobCO3FSx9JXJyW7WNlPcTFmx/X3U+HxmTlVvGMduLOW3uvU1t
+I4WcLEx4r03ANjbWBFNuei5k8nu8Npqjafvkkozc9kx+T54bmvwevWyjY00w
+HEOb5iPrIj/1aIOJ3svWKJO5mcZayXuH+mLjz5oKmlv63VMmeD+rWRlrXt63
+qPu38bvCTOdHOB/JdgX7kFstyl0bug0c52aaE3GsmfWyXxuTzs3wu50Rc8tS
+zh8/bFHqWtF5iPH+lZjvyMgywXHRJ1aFrhndNnI+YqeMtZliFXaDzEVM59X0
+2h9zW63U5LxVkR0gmWXcCzHe5/muU2jKWJuzKLETMI+9bfIztGt7xMxMSk3+
+typwgyC3pyPmZsxNaxMq3Eaa9XJOqwipscbsrlTG2kKV2rpE3mOh73lLe9Tg
+V+oxtci76ia/84M8Kw5/h3/A39Q/4d/wXziq0b90nSd1/dP6dCz12ae+s+kK
+o9HoqrS+20MIIYQQQgghhBBCCCGEEEIIIYT0jYuTYHmQ
+                    "], "Byte", ColorSpace -> "RGB", Interleaving -> True], {
+                    20, 20}], 
+                    Spacer[5], 
+                    TextCell[
+                    If[$CloudRootDirectory === CloudDirectory[], "Home", 
+                    Information[
+                    CloudDirectory[], "DisplayName"]], FontFamily -> 
+                    "Crimson Roman", FontColor -> RGBColor["#36384C"], Bold], 
+                    If[$CloudRootDirectory === CloudDirectory[], 
+                    Spacer[195], 
+                    Spacer[
+                    Max[230 - 7 Length[
+                    Characters[
+                    Information[
+                    CloudDirectory[], "DisplayName"]]], 0]]], 
+                    EventHandler[
+                    ImageResize[
+                    Image[CompressedData["
+1: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
+                    "], "Byte", ColorSpace -> "RGB", Interleaving -> True], 
+                    25], {"MouseClicked" :> (SetCloudDirectory[
+                    ParentDirectory[
+                    CloudDirectory[]]]; $CellContext`lvCloudDirectory = 
+                    If[$CloudRootDirectory === CloudDirectory[], 
+                    Select[
+                    CloudObjects[], StringMatchQ[
+                    Information[#, "DisplayName"], 
+                    Alternatives["Personal_", "Copied Files"]]& ], 
+                    CloudObjects[]])}], 
+                    EventHandler[
+                    ImageResize[
+                    Image[CompressedData["
+1:eJztnd1uFDcYhi3aAw65hV5DC00aKqWHPQVxASBS1JNUCkgtFBqp11XYBMpP
+pUr0itLarU2my9r+vhl7PD/PI71EKLPfzM4+6/F4nJnP7v1w67srxpiHV+0/
+t+7++M3Jyd3Ht6/Z/9w5fvj9g+Oj+98ePzp6cHSyd+8Tt5jNrzafGgAAAAAA
+AAAAAJByenr6bLPZ7LfeDmiHdeBn++NvF+vCXuvtgfHpOmBwYZVYB56aLQcM
+LqyKw8PDjYk4EOLbClgoEgfMpQtPW20n1MM68NwIHTC4sEisAy+M0gFz6cIz
+6Xps3+KmXdc7mz86P0Pe2ryxeVn23YGEIQ4YZbvgPBDWhJHwY0ODPn+jdMGu
+80BYD0ZA44A7T7Sf8RPJsjkXbK2vhOuFyigduBFet2tcaVdSLuDBNJA6YPsM
+57uuKaTGl8z/Xdg5vqBwECqhcGCTqjPEBTxoiz+3G+xAp57Ihe16eNAOhQMv
+lHWlLpyH1/hrE3gwMgoHnsdq+L5drL7UhTNf64Zk+b7vFz5G6kCqfx/OEbrf
+6dgyuTjXrAdfSJbt/66hS0kHzOXneBZbVtHeSwMDUfTnUw7srJFx4UvJeoWB
+AQw9v5fUSJ1TKI7/eFCJMRwIce2C//5/RKF2AXpQyAFRf6+b7rjzNgOvY4KS
+Vg6EVHIBFPh+WzMHQiq4AEIUDjyJ1ZBeT5aksAsgQDqfNNaXc5R0ICTjnKbd
+gQzSdiDlQJ85qdKUcEEz53GNKBxItdHVHAgp5AJzobfQjNu2diCkkAv8vYyn
+oAOD5yVrQ7tQBqkD7jNOjO+VGuvFhQYoHPgtUaOpAyG40I9CDlyX1BgrJcay
+tHOm5oxin0y+HdgOLsgo4UCJceKaKeTCJrkjZ4ziOFlqzK5ZSsxnSdWYK4Uc
+KD5OXDOFXFhMu7CmdmA7pdqF1Bj6HFizAyGl5rmlxtCmzBqPBbH4cbDru96j
+O4cucV1liuBA9HP8PPZ+FdfaZ+GCYh7ZqhwIWYMLODCeC1O9VqnY/sexGnPv
+EypykXHhTLgvJ+VCifZM+t4XlAv7Of4U2x/SdnEqLkiv+8f6y77GmaTGArMI
+F6T9gUw7cC6pseBcZI6VIhdajzXlXMCB+i5M5d7gMRcyc4pf7nrNmqMdV/X3
++5qEA4GuC7lrZSvuD2STejZM14XUvTta48dIs/MoaAuSHhyk9p37vi1lDhv9
+gqQHN4fs2zmBB3jg4LiAB46cB+73Nq/9Mwve+mcZdBOeZeCW+d0vv8nUdM9A
++NPmvc9fnbz3vwvPSXjtaybbLdfftXnV2cbu8xbCdoZtDdubrLkyD16ZyH7o
+OzaWujbh16dGML++L3hgqnkQHc/Cg2mS8aDXOdFp4p6K7tjRpyYe1KVSe5Dy
+YE7twdcD6s6KGXmQu396X/DA4EGqJseFwf2DX2I1B3iQe85OX/DA4EGqJh58
+8KDXPaTwYH5U8qBG/wAPKjIjD+gnVqSBB72eqdzIg+T8gyVRqZ+YGlfGgwlS
+yYPUdSY8mCApD2qkogfFgwd4YP7zIPocwaWBB3jgaOBBrfNGPBgAHuCBg+MC
+HjjGnq+MB9OE9gAPHHiABw6OC3jgwIOkB2saT8QDPMADPPiXGfUTD8bcTmNW
+Nw9l7Pag73hiCw9W8/cLrk/s2lz390LuHkrC7O2IZNn9Id+xzrZqt02b/TWd
+KwAAAAAAAAAAAAAAAAAAAAAAAADAsvkHdx9lxw==
+                    "], "Byte", ColorSpace -> "RGB", 
+                    ImageSize -> {51.10000000000002, Automatic}, Interleaving -> 
+                    True], 25], {
+                    "MouseClicked" :> (
+                    SetCloudDirectory[]; $CellContext`lvCloudDirectory = 
+                    If[$CloudRootDirectory === CloudDirectory[], 
+                    Select[
+                    CloudObjects[], StringMatchQ[
+                    Information[#, "DisplayName"], 
+                    Alternatives["Personal_", "Copied Files"]]& ], 
+                    CloudObjects[]])}]}, Frame -> True, FrameStyle -> 
+                    Directive[
+                    Thickness[1], 
+                    RGBColor[
+                    CloudSymbol[
+                    "https://www.solomon.lab.centcorp.tech/obj/solomon/\
+CloudSymbol/COLOR-DarkNavy"]["HexCode"]]]]}, {
+                    Spacer[10]}, {
+                    Pane[
+                    Column[
+                    ReplaceAll[
+                    Map[EventHandler[
+                    Row[{
+                    If[Information[#, "FileType"] === Directory, 
+                    ImageResize[
+                    Image[CompressedData["
+1:eJztnE2M1VQYhuvPwsSNa+NGE6PEEI0RRI3JdeHCGDYYN8bNEEYyCwadQRBR
+O8AAUYPGGE3UGI0uXelCEZELKP5FwURd6JYY1y7RoZf3C98l5c5pb0/b03Pa
+vk/ykMydS3vO985pT39v3rx901NXR1G0eB3+2TSz66GFhZndj92AHx6fX5zb
+Oj+75ZH5HbNbZxc2bL4GH87CeXhtRAghhBBCCCGEEEIIIYQQQvrOcDi8Ht4E
+b4Fr4Fp4F7wb3gPXwfXwXrhBXe+73T3hCDwHz8ORwSTj8zyTOI53N9qL7nNj
+ZJ9DWSW/nQ31q6v8A/+LmsvsssjuuSY62FFWIg+ZpUyw77vDfTe7A/7eN0Z+
+M0uPvR2u+9sVUKtHowAyGzsYDI5g7N3uuNutB7m9FAWQ16Ro1zNOO95yUJ+5
+KICcTOrY437PAHKbiQLIKE+08Vl3FWgnqMmTUQDZFDAJSdRtj89jGKx7S+Q/
+k9bq69wP1rutbJvpJbEPvt++8tXQYybvfW+zmD8dta98NXQb7b3vbRa5nbAu
+fEV0++y97x2wUZhba3PjdrKdue2qse19tlGYWy2uWBe+Ii5zwzzrZ3gWnoG/
+pDyjn59N/V6++yP8Dp6G38BTMleDQ3gcfp3yeI0O1RPqSfWUKm35Fn6vntbf
+fwk/g+81mZlQZ25SexyDPtB0H/pIXfMSLGe58cb3mDpywzIONN/yflP1+A3/
+/6CHZveeGo67jeg9sHfK/lPWodc9XpDr63AJ7pNxCg/Bl+Er8FV4GL4GX4dv
+wDfh2/Bd+AH8CH6sfgjfh+/At/T7h3VZh3T5y3C/rk/ca3Bfyv0pl9UD6kHD
+Mvdqf8YspX92mNvzZTOTtpuWifnJ52WX2UHlWt1Sfgr2yDio0KZVILMvauhr
+56z7Wk/Z3Ez7NV4TyjWZloUNZXPD38+DhsWVeV6gN8ozL7lhWCBzBdv1Y1v4
+q2E5i77rEroyT5uWR1HK5GaaJ1XcT/bF2iiTW8aifNckaLXOtWE7TjLGGq+9
+lqhbFWxzwzb6PsNivNclcGudSwo2x92m+1/iS88e+q5L0Na9jRRscosN9+fG
+gT4XEpAXpqdgj+V5LhO+6xKyiV7frJ2iucWG+6l1X+u7NiHrZKwJFuPNhO+6
+hGwSO3x+tkhuGWOt9HWEnuhsrAlFjgNM22i57lSxX11WxprTZ/YK5JZ17OG7
+NiHrdKwJ03Lj3N9ap/u1MVPOT3Ks2XsBNX1iStkrk5dbxljjef8c44beXWWb
+22Aw+KloH3qobCO3FSx9JXJyW7WNlPcTFmx/X3U+HxmTlVvGMduLOW3uvU1t
+I4WcLEx4r03ANjbWBFNuei5k8nu8Npqjafvkkozc9kx+T54bmvwevWyjY00w
+HEOb5iPrIj/1aIOJ3svWKJO5mcZayXuH+mLjz5oKmlv63VMmeD+rWRlrXt63
+qPu38bvCTOdHOB/JdgX7kFstyl0bug0c52aaE3GsmfWyXxuTzs3wu50Rc8tS
+zh8/bFHqWtF5iPH+lZjvyMgywXHRJ1aFrhndNnI+YqeMtZliFXaDzEVM59X0
+2h9zW63U5LxVkR0gmWXcCzHe5/muU2jKWJuzKLETMI+9bfIztGt7xMxMSk3+
+typwgyC3pyPmZsxNaxMq3Eaa9XJOqwipscbsrlTG2kKV2rpE3mOh73lLe9Tg
+V+oxtci76ia/84M8Kw5/h3/A39Q/4d/wXziq0b90nSd1/dP6dCz12ae+s+kK
+o9HoqrS+20MIIYQQQgghhBBCCCGEEEIIIYT0jYuTYHmQ
+                    "], "Byte", ColorSpace -> "RGB", Interleaving -> True], {
+                    20, 20}], 
+                    ImageResize[
+                    Image[CompressedData["
+1:eJztXQeYFEUWHm9RkIOTFRBQQVYMqKAiBkynopjOiKKAegqKGFEBxZzOgOkE
+Axg/PXW5xUNP9EwoYjj1zDnL5pxznqmrv3a7+3VPT3fP7ExPz1T/31cM3V2p
+66+uevXeq9qsuZdNP/8PgUBg0QD+z/Q5Sw5buHDONacM4RczFiy6cP6Ceecd
+s2DxvPnzFk6Zm8Fv3twb+gX6jsGDBw+bPXv2PcuXL8/Nzs4OrVq1ivkh8QFt
+jTZH24ODOFAZNbKysiavXLmyPNltIXsAB+DCTe7R53zuvRPAhZvjAMYdWv6G
+DRtYbW0t8+EO0NZoc8oBOHGLf8w9lPtQKJTsJpEOaHPaB8CJW/xz+SOolOt/
+98kD2l7hATJhRkZGPMT6iNh8k8DApQMDT/42fFO2MTOgC3lZmaz+wXuS3STS
+IScnR+0DAwcOHJJI/h8cFHjRyLsxNK1ZlewmkQpr1qxxjf+fMwNBO/7Lzzo5
+2U0iFdzk/9fMQMiO/4rzz0h2k0gFT/E/9A+s9f13kt0kUiEZ/P+y7SD247hh
+IhTsvh0r2GMsKz3+UNay7tVkN4d0cJP/rzMDHe8MCbBV2dlqmT6SCzf5n9E/
+sOSlLQI6vZOP5MJN/oGDNw3M8vn3DtzmH/D59w58/uWGz7/c8PmXG27y79t/
+vAc3+fftP96Db/+JD9o+/iDZVYgJntL/p6j9p+OHb1nuyP7iN9XgKf5T1P4D
+2wXqj99Ug2//6RuaX3pe14eb/7062VWKCr79J3aE2lpZwcQxOv5xjfupAt/+
+Eztql95kOo/hfqrAt//Ehq7CfC7zDVA5r7xsnvp/3MfzVICM+r+Gpx5hXSVF
+fcqj/JwZKt+l048U9/CrrmPPPrVP+XeVFot6Jhoy8l960uEsd3g/VnHuTNb+
+xSdRp2/9YIP2rfN8On/5UdzHL66VZ7GsZdq//JRVzJvNcrfalJUcd0jU6aOF
+jPxDx0Dn65Ij9xdyfKiryzYt4hQdOFFNW33t5brnuFaeFR0wwXGezWv/xUqO
+PlCvC+H9M9GQkf+am64yldsgu9c9cDcL1tdFTNvw2INq/Pwdh7NgQ73uOa5x
+X4mD+JGAuPUP3SvWwGb1qb5+UdzeORJktP/UP3yfpQ4yd5s/sqorL2adv/+q
+S9ddUy3qqcRrfOZx0/wbn31C915IR9G58TdWveRSUY5VPdxoDxntP00v/NOy
+DmrYchNWNvM41vreepGuauEF6rPiQ/fiH3DQvAB+v3jq3mpcpAMgD5TNOl7k
+66R8N9pCRvtP24fvmZZdPHUfVnrCYabPivbfTeinleu2Tz+yLoM/p3ptyAJm
++ULvWXzEfqbPIGcmGp7S/2e6Y//p/P0XrcxhGTqeWt99m3V8/w2rvPgcljti
+M/M6zj/TUTmIZzq/8HwrLzqbdXz7lSiP9itaH9Qz0fAU/y7Zf0KtLZrMt+s2
+rGLu6ZpMt/NI1l1ZIeLhF7q8/J220tUTuh4nqLr8fF06yIW1d97I8y1X888f
+P0ob++acxgomjFavUc9EQ1b7T97owT3fIl+vQw4vnLS9NiafPE03t4fa24Wc
+TrlszH7KMv/GVU+HyXLIR8s0JMpRnqN81APrflyjfm5AVvtP4T47q22P77H9
+q891433d/XeGpam+eoE2ho8cwNq/+dI0b9ynumHI+kYgfzUvznn7l5+J8UDt
+D7x+bkBW+w+V8zAPA/Ur7tfNw03PP6f7ZkOdnazkmIO0uYOPW8HaGl2+uC7Y
+M0uNU3LUASKdmkdHh8iXzvMoF4DcoY5BvH5uQFb7T8V5s9S2bnnrtZ6bfEwu
+m32CbtzG+h3zONYMeN5dXsrlgRHq87IZx2hzBf/FtTrf83iIj3RIj3yo/kCk
+5+tB1nv+Ucvbr2syJq+fG5BR/wfU3HilNpcTPQ7sQpHkU8hmNTcvYQ1PrtDp
++SHTAfhVx3T+vOGJh0V8KtMZA7VDNT73pHof9XMDsvJPdYC19/xNe9Ddbbk+
+VQPV4fD/Q1drvOckLcpTUHff7dqcwOvnBmTiP9TSLHQqdcuWsuJpU9S2rrpi
+vi6e+r1PHCNsejW3Xaeb02MJSI98On/9Saw5Vf4JqH4RNinUE/MG6p0opC3/
+fE4Fd1inYd4tOngPvZ6FzvHbbcG6igvVpPDlVe7T/No++ZBVLbqQ5e8wzBHn
+iFe1+KIeXSE54xD59qwh+qv3UH7e2CHmeXFZsejPe4r+gffp/O1nXX59QbrY
+f2Bjgf6g9o4bhB+G0sZOg7C198pxSlod/wSQ51ve/I+wz+aO2lyXT+7WA8V9
+PKdyP0VY/rxcxYfYaUBfKT3lKKGfgtwYrIvtHMVUt/9UX3sFK9x7R2dttu0g
+4ftRc+s1rOX1l8WeDbpOx3gL5I8b2nOPjxd2CDY36crAtR3U8YGXA9Qtv0vr
+P7w+GPObX32J1dxytVgHot5O3q9w751Y9XULo2q/VLf/tH/+v7BvUJGxYLOp
+vPRc1viPx1jHj9/pZC0FDY8/pLX9iM2E7oba452AlhtNfJQD3QPVO9U/+kB4
+Al5v6AYann6UVV4ylxXut4upfIl2wBwVDTyl/8+Mzf7T8sYrurkdttdgY4Oz
+xFjzn3q09g3xtoUNQLl2ooOPhn/4hqvfPy9HcNl7jXo4ndehK6Y2Zrx/y2tr
+HaWl8BT/fbD/4BunecHHxym6K8oiynRWvkAKouEf+ZmVg/KFrsghMDfQ9LH6
+iqaT/cfoj286lkYAvh0zXhRboBWi4b+7usq0HMz3TkHnLATIvLEi3ew/mB/p
+eAK/SsdpiQ+/EroK8mzTRcM/8jOW4dSeDDS/vEY311VeMqdPa8G0s/9wWYnq
+4LHGbvvofUdJIbsb1xLNr7wY2c+rF4755/kgP53MPnkHR2sGwLhegbzgxL/Y
+Culo/4HMBl8upZ2wVu74+YfICXifwdwD/wtF96Obm8ePYlVXXdLTj0z6giX/
+PD7SIT319aD9E/4nYu4zWZ8ogC6L2o4g+8VDL5iu+r/uqkrxbalrrQmjw/b8
+YE0IvT2V9+1CwW7bijV2+2cfq+NuGP/8Pp4jnpXtJ6yf8XpU37C4Z61KgL1A
+NJ/CvcaJ94sH0pV/oDP3d50vPvZtwPe6fuUyVnzIJEsu4JMB/qifSFhf4Jwg
+Dr1nxznyQxzFzydSKD5sMqt/ZLl4h6KDdtetE/AO8UI68w/ArwY6Wbtvz+jr
+iT6iAOd61N5+vWVfsApIh/T0fBDkb+xvtnXk74H9YfFEuvMP4EwG0/F23FAx
+L0MmU3W+PGBvZySAQ9jxqL+gKef8OeJZnQlD95Ci/OaXXxD7TvK239I0z6YX
+c+LeNuli/4kE+FuVnjhV+4aG92PlZ5woOMczBOp/j2812NToKO/Wd9/S+48j
+8GvcdwKUQ8cU1EOpE/oCfJGon0npSUeIZ/FEqtt/LMHlMOrnJXSkBh0TfDPp
++Nrx0/eOsy//63TTd8B9p0B5dH4y+orCjkjX+0I/Hse/l5fq9h8rCJ8ckjf8
+qygwnur63vPPOc4bvl20XwnfHcITnjuF8Ae1GOfpfkKEePqGeUr/nxm//T86
+X95MnMlys+652KtP9l/Cr8MpOr77WqcnqL3rFnEfv+pYgvPgeDynQPlqWl4v
+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
+8QFtjTbHmN+X7/7/VFbJ/g==
+                    "], "Byte", ColorSpace -> "RGB", 
+                    ImageResolution -> {120., 120.}, 
+                    ImageSize -> {51.59999999999995, Automatic}, Interleaving -> 
+                    True], {20, 20}]], 
+                    Spacer[10], 
+                    TextCell[
+                    Mouseover[
+                    Information[#, "DisplayName"], 
+                    Style[
+                    Information[#, "DisplayName"], 
+                    RGBColor["#B87333"]]], FontFamily -> "Crimson Roman", 
+                    FontColor -> RGBColor["#36384C"], Bold]}], {
+                    "MouseClicked" :> 
+                    If[Information[#, "FileType"] === Directory, 
+                    SetCloudDirectory[
+                    
+                    Information[#, 
+                    "DisplayName"]]; $CellContext`lvCloudDirectory = 
+                    If[$CloudRootDirectory === CloudDirectory[], 
+                    Select[
+                    CloudObjects[], StringMatchQ[
+                    Information[#, "DisplayName"], 
+                    Alternatives["Personal_", "Copied Files"]]& ], 
+                    CloudObjects[]], Quiet[
+                    NotebookOpen[
+                    CloudObject[
+                    Information[#, "DisplayName"]]], {
+                    MessageName[ReplaceAll, "reps"]}]; NotebookClose[
+                    
+                    EvaluationNotebook[]]]}]& , \
+$CellContext`lvCloudDirectory], Null -> {
+                    Spacer[1]}]], Scrollbars -> {False, True}, 
+                    ImageSize -> {380, 140}, ImageSizeAction -> 
+                    "Scrollable"]}], Alignment -> Left], 
+                    TrackedSymbols :> {$CellContext`lvCloudDirectory}]]], 
+                    WindowSize -> {400, 230}, WindowTitle -> "Open File", 
+                    TextAlignment -> Center, Background -> 
+                    RGBColor["#ffffff"]]], ImageSize -> 50, BaseStyle -> 
+                  RGBColor[1., 1., 1.], Background -> 
+                  RGBColor[
+                   0.21176470588235294`, 0.2196078431372549, 
+                    0.2980392156862745], Appearance -> Automatic, Evaluator -> 
+                  Automatic, Method -> "Preemptive"], 
+                 Alignment -> {Right, Bottom}, ItemSize -> Scaled[0.05], 
+                 StripOnInput -> False], 
+                TemplateBox[{10}, "Spacer1"], 
+                ItemBox[
+                 ButtonBox[
+                 "\"Save\"", ButtonFunction :> If[$CloudUserID === None, 
+                    Print[
+                    "Please login to the Solomon cloud to update your \
+Paclets."], 
+                    If[
+                    MissingQ[
+                    Association[
+                    NotebookInformation[
+                    EvaluationNotebook[]]]["Uri"]], 
+                    CreateWindow[
+                    DialogNotebook[
+                    DynamicModule[{$CellContext`lvCloudDirectory = 
+                    If[$CloudRootDirectory === CloudDirectory[], 
+                    Select[
+                    CloudObjects[], StringMatchQ[
+                    Information[#, "DisplayName"], 
+                    Alternatives["Personal_", "Copied Files"]]& ], 
+                    CloudObjects[]], $CellContext`lvFileName = Association[
+                    NotebookInformation[
+                    EvaluationNotebook[]]][
+                    "WindowTitle"], $CellContext`lvFileToSave = 
+                    EvaluationNotebook[]}, 
+                    Dynamic[
+                    Column[
+                    Join[{
+                    Row[{
+                    ImageResize[
+                    Image[CompressedData["
+1:eJztnE2M1VQYhuvPwsSNa+NGE6PEEI0RRI3JdeHCGDYYN8bNEEYyCwadQRBR
+O8AAUYPGGE3UGI0uXelCEZELKP5FwURd6JYY1y7RoZf3C98l5c5pb0/b03Pa
+vk/ykMydS3vO985pT39v3rx901NXR1G0eB3+2TSz66GFhZndj92AHx6fX5zb
+Oj+75ZH5HbNbZxc2bL4GH87CeXhtRAghhBBCCCGEEEIIIYQQQvrOcDi8Ht4E
+b4Fr4Fp4F7wb3gPXwfXwXrhBXe+73T3hCDwHz8ORwSTj8zyTOI53N9qL7nNj
+ZJ9DWSW/nQ31q6v8A/+LmsvsssjuuSY62FFWIg+ZpUyw77vDfTe7A/7eN0Z+
+M0uPvR2u+9sVUKtHowAyGzsYDI5g7N3uuNutB7m9FAWQ16Ro1zNOO95yUJ+5
+KICcTOrY437PAHKbiQLIKE+08Vl3FWgnqMmTUQDZFDAJSdRtj89jGKx7S+Q/
+k9bq69wP1rutbJvpJbEPvt++8tXQYybvfW+zmD8dta98NXQb7b3vbRa5nbAu
+fEV0++y97x2wUZhba3PjdrKdue2qse19tlGYWy2uWBe+Ii5zwzzrZ3gWnoG/
+pDyjn59N/V6++yP8Dp6G38BTMleDQ3gcfp3yeI0O1RPqSfWUKm35Fn6vntbf
+fwk/g+81mZlQZ25SexyDPtB0H/pIXfMSLGe58cb3mDpywzIONN/yflP1+A3/
+/6CHZveeGo67jeg9sHfK/lPWodc9XpDr63AJ7pNxCg/Bl+Er8FV4GL4GX4dv
+wDfh2/Bd+AH8CH6sfgjfh+/At/T7h3VZh3T5y3C/rk/ca3Bfyv0pl9UD6kHD
+Mvdqf8YspX92mNvzZTOTtpuWifnJ52WX2UHlWt1Sfgr2yDio0KZVILMvauhr
+56z7Wk/Z3Ez7NV4TyjWZloUNZXPD38+DhsWVeV6gN8ozL7lhWCBzBdv1Y1v4
+q2E5i77rEroyT5uWR1HK5GaaJ1XcT/bF2iiTW8aifNckaLXOtWE7TjLGGq+9
+lqhbFWxzwzb6PsNivNclcGudSwo2x92m+1/iS88e+q5L0Na9jRRscosN9+fG
+gT4XEpAXpqdgj+V5LhO+6xKyiV7frJ2iucWG+6l1X+u7NiHrZKwJFuPNhO+6
+hGwSO3x+tkhuGWOt9HWEnuhsrAlFjgNM22i57lSxX11WxprTZ/YK5JZ17OG7
+NiHrdKwJ03Lj3N9ap/u1MVPOT3Ks2XsBNX1iStkrk5dbxljjef8c44beXWWb
+22Aw+KloH3qobCO3FSx9JXJyW7WNlPcTFmx/X3U+HxmTlVvGMduLOW3uvU1t
+I4WcLEx4r03ANjbWBFNuei5k8nu8Npqjafvkkozc9kx+T54bmvwevWyjY00w
+HEOb5iPrIj/1aIOJ3svWKJO5mcZayXuH+mLjz5oKmlv63VMmeD+rWRlrXt63
+qPu38bvCTOdHOB/JdgX7kFstyl0bug0c52aaE3GsmfWyXxuTzs3wu50Rc8tS
+zh8/bFHqWtF5iPH+lZjvyMgywXHRJ1aFrhndNnI+YqeMtZliFXaDzEVM59X0
+2h9zW63U5LxVkR0gmWXcCzHe5/muU2jKWJuzKLETMI+9bfIztGt7xMxMSk3+
+typwgyC3pyPmZsxNaxMq3Eaa9XJOqwipscbsrlTG2kKV2rpE3mOh73lLe9Tg
+V+oxtci76ia/84M8Kw5/h3/A39Q/4d/wXziq0b90nSd1/dP6dCz12ae+s+kK
+o9HoqrS+20MIIYQQQgghhBBCCCGEEEIIIYT0jYuTYHmQ
+                    "], "Byte", ColorSpace -> "RGB", Interleaving -> True], {
+                    20, 20}], 
+                    Spacer[5], 
+                    TextCell[
+                    If[$CloudRootDirectory === CloudDirectory[], "Home", 
+                    Information[
+                    CloudDirectory[], "DisplayName"]], FontFamily -> 
+                    "Crimson Roman", FontColor -> RGBColor["#36384C"], Bold], 
+                    If[$CloudRootDirectory === CloudDirectory[], 
+                    Spacer[195], 
+                    Spacer[
+                    Max[230 - 7 Length[
+                    Characters[
+                    Information[
+                    CloudDirectory[], "DisplayName"]]], 0]]], 
+                    EventHandler[
+                    ImageResize[
+                    Image[CompressedData["
+1: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
+                    "], "Byte", ColorSpace -> "RGB", Interleaving -> True], 
+                    25], {"MouseClicked" :> (SetCloudDirectory[
+                    ParentDirectory[
+                    CloudDirectory[]]]; $CellContext`lvCloudDirectory = 
+                    If[$CloudRootDirectory === CloudDirectory[], 
+                    Select[
+                    CloudObjects[], StringMatchQ[
+                    Information[#, "DisplayName"], 
+                    Alternatives["Personal_", "Copied Files"]]& ], 
+                    CloudObjects[]])}], 
+                    EventHandler[
+                    ImageResize[
+                    Image[CompressedData["
+1:eJztnd1uFDcYhi3aAw65hV5DC00aKqWHPQVxASBS1JNUCkgtFBqp11XYBMpP
+pUr0itLarU2my9r+vhl7PD/PI71EKLPfzM4+6/F4nJnP7v1w67srxpiHV+0/
+t+7++M3Jyd3Ht6/Z/9w5fvj9g+Oj+98ePzp6cHSyd+8Tt5jNrzafGgAAAAAA
+AAAAAJByenr6bLPZ7LfeDmiHdeBn++NvF+vCXuvtgfHpOmBwYZVYB56aLQcM
+LqyKw8PDjYk4EOLbClgoEgfMpQtPW20n1MM68NwIHTC4sEisAy+M0gFz6cIz
+6Xps3+KmXdc7mz86P0Pe2ryxeVn23YGEIQ4YZbvgPBDWhJHwY0ODPn+jdMGu
+80BYD0ZA44A7T7Sf8RPJsjkXbK2vhOuFyigduBFet2tcaVdSLuDBNJA6YPsM
+57uuKaTGl8z/Xdg5vqBwECqhcGCTqjPEBTxoiz+3G+xAp57Ihe16eNAOhQMv
+lHWlLpyH1/hrE3gwMgoHnsdq+L5drL7UhTNf64Zk+b7vFz5G6kCqfx/OEbrf
+6dgyuTjXrAdfSJbt/66hS0kHzOXneBZbVtHeSwMDUfTnUw7srJFx4UvJeoWB
+AQw9v5fUSJ1TKI7/eFCJMRwIce2C//5/RKF2AXpQyAFRf6+b7rjzNgOvY4KS
+Vg6EVHIBFPh+WzMHQiq4AEIUDjyJ1ZBeT5aksAsgQDqfNNaXc5R0ICTjnKbd
+gQzSdiDlQJ85qdKUcEEz53GNKBxItdHVHAgp5AJzobfQjNu2diCkkAv8vYyn
+oAOD5yVrQ7tQBqkD7jNOjO+VGuvFhQYoHPgtUaOpAyG40I9CDlyX1BgrJcay
+tHOm5oxin0y+HdgOLsgo4UCJceKaKeTCJrkjZ4ziOFlqzK5ZSsxnSdWYK4Uc
+KD5OXDOFXFhMu7CmdmA7pdqF1Bj6HFizAyGl5rmlxtCmzBqPBbH4cbDru96j
+O4cucV1liuBA9HP8PPZ+FdfaZ+GCYh7ZqhwIWYMLODCeC1O9VqnY/sexGnPv
+EypykXHhTLgvJ+VCifZM+t4XlAv7Of4U2x/SdnEqLkiv+8f6y77GmaTGArMI
+F6T9gUw7cC6pseBcZI6VIhdajzXlXMCB+i5M5d7gMRcyc4pf7nrNmqMdV/X3
++5qEA4GuC7lrZSvuD2STejZM14XUvTta48dIs/MoaAuSHhyk9p37vi1lDhv9
+gqQHN4fs2zmBB3jg4LiAB46cB+73Nq/9Mwve+mcZdBOeZeCW+d0vv8nUdM9A
++NPmvc9fnbz3vwvPSXjtaybbLdfftXnV2cbu8xbCdoZtDdubrLkyD16ZyH7o
+OzaWujbh16dGML++L3hgqnkQHc/Cg2mS8aDXOdFp4p6K7tjRpyYe1KVSe5Dy
+YE7twdcD6s6KGXmQu396X/DA4EGqJseFwf2DX2I1B3iQe85OX/DA4EGqJh58
+8KDXPaTwYH5U8qBG/wAPKjIjD+gnVqSBB72eqdzIg+T8gyVRqZ+YGlfGgwlS
+yYPUdSY8mCApD2qkogfFgwd4YP7zIPocwaWBB3jgaOBBrfNGPBgAHuCBg+MC
+HjjGnq+MB9OE9gAPHHiABw6OC3jgwIOkB2saT8QDPMADPPiXGfUTD8bcTmNW
+Nw9l7Pag73hiCw9W8/cLrk/s2lz390LuHkrC7O2IZNn9Id+xzrZqt02b/TWd
+KwAAAAAAAAAAAAAAAAAAAAAAAADAsvkHdx9lxw==
+                    "], "Byte", ColorSpace -> "RGB", 
+                    ImageSize -> {51.10000000000002, Automatic}, Interleaving -> 
+                    True], 25], {
+                    "MouseClicked" :> (
+                    SetCloudDirectory[]; $CellContext`lvCloudDirectory = 
+                    If[$CloudRootDirectory === CloudDirectory[], 
+                    Select[
+                    CloudObjects[], StringMatchQ[
+                    Information[#, "DisplayName"], 
+                    Alternatives["Personal_", "Copied Files"]]& ], 
+                    CloudObjects[]])}]}, Frame -> True, FrameStyle -> 
+                    Directive[
+                    Thickness[1], 
+                    RGBColor[
+                    CloudSymbol[
+                    "https://www.solomon.lab.centcorp.tech/obj/solomon/\
+CloudSymbol/COLOR-DarkNavy"]["HexCode"]]]]}, {
+                    Spacer[10]}, {
+                    Pane[
+                    Column[
+                    ReplaceAll[
+                    Map[EventHandler[
+                    Row[{
+                    If[Information[#, "FileType"] === Directory, 
+                    ImageResize[
+                    Image[CompressedData["
+1:eJztnE2M1VQYhuvPwsSNa+NGE6PEEI0RRI3JdeHCGDYYN8bNEEYyCwadQRBR
+O8AAUYPGGE3UGI0uXelCEZELKP5FwURd6JYY1y7RoZf3C98l5c5pb0/b03Pa
+vk/ykMydS3vO985pT39v3rx901NXR1G0eB3+2TSz66GFhZndj92AHx6fX5zb
+Oj+75ZH5HbNbZxc2bL4GH87CeXhtRAghhBBCCCGEEEIIIYQQQvrOcDi8Ht4E
+b4Fr4Fp4F7wb3gPXwfXwXrhBXe+73T3hCDwHz8ORwSTj8zyTOI53N9qL7nNj
+ZJ9DWSW/nQ31q6v8A/+LmsvsssjuuSY62FFWIg+ZpUyw77vDfTe7A/7eN0Z+
+M0uPvR2u+9sVUKtHowAyGzsYDI5g7N3uuNutB7m9FAWQ16Ro1zNOO95yUJ+5
+KICcTOrY437PAHKbiQLIKE+08Vl3FWgnqMmTUQDZFDAJSdRtj89jGKx7S+Q/
+k9bq69wP1rutbJvpJbEPvt++8tXQYybvfW+zmD8dta98NXQb7b3vbRa5nbAu
+fEV0++y97x2wUZhba3PjdrKdue2qse19tlGYWy2uWBe+Ii5zwzzrZ3gWnoG/
+pDyjn59N/V6++yP8Dp6G38BTMleDQ3gcfp3yeI0O1RPqSfWUKm35Fn6vntbf
+fwk/g+81mZlQZ25SexyDPtB0H/pIXfMSLGe58cb3mDpywzIONN/yflP1+A3/
+/6CHZveeGo67jeg9sHfK/lPWodc9XpDr63AJ7pNxCg/Bl+Er8FV4GL4GX4dv
+wDfh2/Bd+AH8CH6sfgjfh+/At/T7h3VZh3T5y3C/rk/ca3Bfyv0pl9UD6kHD
+Mvdqf8YspX92mNvzZTOTtpuWifnJ52WX2UHlWt1Sfgr2yDio0KZVILMvauhr
+56z7Wk/Z3Ez7NV4TyjWZloUNZXPD38+DhsWVeV6gN8ozL7lhWCBzBdv1Y1v4
+q2E5i77rEroyT5uWR1HK5GaaJ1XcT/bF2iiTW8aifNckaLXOtWE7TjLGGq+9
+lqhbFWxzwzb6PsNivNclcGudSwo2x92m+1/iS88e+q5L0Na9jRRscosN9+fG
+gT4XEpAXpqdgj+V5LhO+6xKyiV7frJ2iucWG+6l1X+u7NiHrZKwJFuPNhO+6
+hGwSO3x+tkhuGWOt9HWEnuhsrAlFjgNM22i57lSxX11WxprTZ/YK5JZ17OG7
+NiHrdKwJ03Lj3N9ap/u1MVPOT3Ks2XsBNX1iStkrk5dbxljjef8c44beXWWb
+22Aw+KloH3qobCO3FSx9JXJyW7WNlPcTFmx/X3U+HxmTlVvGMduLOW3uvU1t
+I4WcLEx4r03ANjbWBFNuei5k8nu8Npqjafvkkozc9kx+T54bmvwevWyjY00w
+HEOb5iPrIj/1aIOJ3svWKJO5mcZayXuH+mLjz5oKmlv63VMmeD+rWRlrXt63
+qPu38bvCTOdHOB/JdgX7kFstyl0bug0c52aaE3GsmfWyXxuTzs3wu50Rc8tS
+zh8/bFHqWtF5iPH+lZjvyMgywXHRJ1aFrhndNnI+YqeMtZliFXaDzEVM59X0
+2h9zW63U5LxVkR0gmWXcCzHe5/muU2jKWJuzKLETMI+9bfIztGt7xMxMSk3+
+typwgyC3pyPmZsxNaxMq3Eaa9XJOqwipscbsrlTG2kKV2rpE3mOh73lLe9Tg
+V+oxtci76ia/84M8Kw5/h3/A39Q/4d/wXziq0b90nSd1/dP6dCz12ae+s+kK
+o9HoqrS+20MIIYQQQgghhBBCCCGEEEIIIYT0jYuTYHmQ
+                    "], "Byte", ColorSpace -> "RGB", Interleaving -> True], {
+                    20, 20}], 
+                    ImageResize[
+                    Image[CompressedData["
+1:eJztXQeYFEUWHm9RkIOTFRBQQVYMqKAiBkynopjOiKKAegqKGFEBxZzOgOkE
+Axg/PXW5xUNP9EwoYjj1zDnL5pxznqmrv3a7+3VPT3fP7ExPz1T/31cM3V2p
+66+uevXeq9qsuZdNP/8PgUBg0QD+z/Q5Sw5buHDONacM4RczFiy6cP6Ceecd
+s2DxvPnzFk6Zm8Fv3twb+gX6jsGDBw+bPXv2PcuXL8/Nzs4OrVq1ivkh8QFt
+jTZH24ODOFAZNbKysiavXLmyPNltIXsAB+DCTe7R53zuvRPAhZvjAMYdWv6G
+DRtYbW0t8+EO0NZoc8oBOHGLf8w9lPtQKJTsJpEOaHPaB8CJW/xz+SOolOt/
+98kD2l7hATJhRkZGPMT6iNh8k8DApQMDT/42fFO2MTOgC3lZmaz+wXuS3STS
+IScnR+0DAwcOHJJI/h8cFHjRyLsxNK1ZlewmkQpr1qxxjf+fMwNBO/7Lzzo5
+2U0iFdzk/9fMQMiO/4rzz0h2k0gFT/E/9A+s9f13kt0kUiEZ/P+y7SD247hh
+IhTsvh0r2GMsKz3+UNay7tVkN4d0cJP/rzMDHe8MCbBV2dlqmT6SCzf5n9E/
+sOSlLQI6vZOP5MJN/oGDNw3M8vn3DtzmH/D59w58/uWGz7/c8PmXG27y79t/
+vAc3+fftP96Db/+JD9o+/iDZVYgJntL/p6j9p+OHb1nuyP7iN9XgKf5T1P4D
+2wXqj99Ug2//6RuaX3pe14eb/7062VWKCr79J3aE2lpZwcQxOv5xjfupAt/+
+Eztql95kOo/hfqrAt//Ehq7CfC7zDVA5r7xsnvp/3MfzVICM+r+Gpx5hXSVF
+fcqj/JwZKt+l048U9/CrrmPPPrVP+XeVFot6Jhoy8l960uEsd3g/VnHuTNb+
+xSdRp2/9YIP2rfN8On/5UdzHL66VZ7GsZdq//JRVzJvNcrfalJUcd0jU6aOF
+jPxDx0Dn65Ij9xdyfKiryzYt4hQdOFFNW33t5brnuFaeFR0wwXGezWv/xUqO
+PlCvC+H9M9GQkf+am64yldsgu9c9cDcL1tdFTNvw2INq/Pwdh7NgQ73uOa5x
+X4mD+JGAuPUP3SvWwGb1qb5+UdzeORJktP/UP3yfpQ4yd5s/sqorL2adv/+q
+S9ddUy3qqcRrfOZx0/wbn31C915IR9G58TdWveRSUY5VPdxoDxntP00v/NOy
+DmrYchNWNvM41vreepGuauEF6rPiQ/fiH3DQvAB+v3jq3mpcpAMgD5TNOl7k
+66R8N9pCRvtP24fvmZZdPHUfVnrCYabPivbfTeinleu2Tz+yLoM/p3ptyAJm
++ULvWXzEfqbPIGcmGp7S/2e6Y//p/P0XrcxhGTqeWt99m3V8/w2rvPgcljti
+M/M6zj/TUTmIZzq/8HwrLzqbdXz7lSiP9itaH9Qz0fAU/y7Zf0KtLZrMt+s2
+rGLu6ZpMt/NI1l1ZIeLhF7q8/J220tUTuh4nqLr8fF06yIW1d97I8y1X888f
+P0ob++acxgomjFavUc9EQ1b7T97owT3fIl+vQw4vnLS9NiafPE03t4fa24Wc
+TrlszH7KMv/GVU+HyXLIR8s0JMpRnqN81APrflyjfm5AVvtP4T47q22P77H9
+q891433d/XeGpam+eoE2ho8cwNq/+dI0b9ynumHI+kYgfzUvznn7l5+J8UDt
+D7x+bkBW+w+V8zAPA/Ur7tfNw03PP6f7ZkOdnazkmIO0uYOPW8HaGl2+uC7Y
+M0uNU3LUASKdmkdHh8iXzvMoF4DcoY5BvH5uQFb7T8V5s9S2bnnrtZ6bfEwu
+m32CbtzG+h3zONYMeN5dXsrlgRHq87IZx2hzBf/FtTrf83iIj3RIj3yo/kCk
+5+tB1nv+Ucvbr2syJq+fG5BR/wfU3HilNpcTPQ7sQpHkU8hmNTcvYQ1PrtDp
++SHTAfhVx3T+vOGJh0V8KtMZA7VDNT73pHof9XMDsvJPdYC19/xNe9Ddbbk+
+VQPV4fD/Q1drvOckLcpTUHff7dqcwOvnBmTiP9TSLHQqdcuWsuJpU9S2rrpi
+vi6e+r1PHCNsejW3Xaeb02MJSI98On/9Saw5Vf4JqH4RNinUE/MG6p0opC3/
+fE4Fd1inYd4tOngPvZ6FzvHbbcG6igvVpPDlVe7T/No++ZBVLbqQ5e8wzBHn
+iFe1+KIeXSE54xD59qwh+qv3UH7e2CHmeXFZsejPe4r+gffp/O1nXX59QbrY
+f2Bjgf6g9o4bhB+G0sZOg7C198pxSlod/wSQ51ve/I+wz+aO2lyXT+7WA8V9
+PKdyP0VY/rxcxYfYaUBfKT3lKKGfgtwYrIvtHMVUt/9UX3sFK9x7R2dttu0g
+4ftRc+s1rOX1l8WeDbpOx3gL5I8b2nOPjxd2CDY36crAtR3U8YGXA9Qtv0vr
+P7w+GPObX32J1dxytVgHot5O3q9w751Y9XULo2q/VLf/tH/+v7BvUJGxYLOp
+vPRc1viPx1jHj9/pZC0FDY8/pLX9iM2E7oba452AlhtNfJQD3QPVO9U/+kB4
+Al5v6AYann6UVV4ylxXut4upfIl2wBwVDTyl/8+Mzf7T8sYrurkdttdgY4Oz
+xFjzn3q09g3xtoUNQLl2ooOPhn/4hqvfPy9HcNl7jXo4ndehK6Y2Zrx/y2tr
+HaWl8BT/fbD/4BunecHHxym6K8oiynRWvkAKouEf+ZmVg/KFrsghMDfQ9LH6
+iqaT/cfoj286lkYAvh0zXhRboBWi4b+7usq0HMz3TkHnLATIvLEi3ew/mB/p
+eAK/SsdpiQ+/EroK8mzTRcM/8jOW4dSeDDS/vEY311VeMqdPa8G0s/9wWYnq
+4LHGbvvofUdJIbsb1xLNr7wY2c+rF4755/kgP53MPnkHR2sGwLhegbzgxL/Y
+Culo/4HMBl8upZ2wVu74+YfICXifwdwD/wtF96Obm8ePYlVXXdLTj0z6giX/
+PD7SIT319aD9E/4nYu4zWZ8ogC6L2o4g+8VDL5iu+r/uqkrxbalrrQmjw/b8
+YE0IvT2V9+1CwW7bijV2+2cfq+NuGP/8Pp4jnpXtJ6yf8XpU37C4Z61KgL1A
+NJ/CvcaJ94sH0pV/oDP3d50vPvZtwPe6fuUyVnzIJEsu4JMB/qifSFhf4Jwg
+Dr1nxznyQxzFzydSKD5sMqt/ZLl4h6KDdtetE/AO8UI68w/ArwY6Wbtvz+jr
+iT6iAOd61N5+vWVfsApIh/T0fBDkb+xvtnXk74H9YfFEuvMP4EwG0/F23FAx
+L0MmU3W+PGBvZySAQ9jxqL+gKef8OeJZnQlD95Ci/OaXXxD7TvK239I0z6YX
+c+LeNuli/4kE+FuVnjhV+4aG92PlZ5woOMczBOp/j2812NToKO/Wd9/S+48j
+8GvcdwKUQ8cU1EOpE/oCfJGon0npSUeIZ/FEqtt/LMHlMOrnJXSkBh0TfDPp
++Nrx0/eOsy//63TTd8B9p0B5dH4y+orCjkjX+0I/Hse/l5fq9h8rCJ8ckjf8
+qygwnur63vPPOc4bvl20XwnfHcITnjuF8Ae1GOfpfkKEePqGeUr/nxm//T86
+X95MnMlys+652KtP9l/Cr8MpOr77WqcnqL3rFnEfv+pYgvPgeDynQPlqWl4v
+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
+8QFtjTbHmN+X7/7/VFbJ/g==
+                    "], "Byte", ColorSpace -> "RGB", 
+                    ImageResolution -> {120., 120.}, 
+                    ImageSize -> {51.59999999999995, Automatic}, Interleaving -> 
+                    True], {20, 20}]], 
+                    Spacer[10], 
+                    TextCell[
+                    Mouseover[
+                    Information[#, "DisplayName"], 
+                    Style[
+                    Information[#, "DisplayName"], 
+                    RGBColor["#B87333"]]], FontFamily -> "Crimson Roman", 
+                    FontColor -> RGBColor["#36384C"], Bold]}], {
+                    "MouseClicked" :> 
+                    If[Information[#, "FileType"] === Directory, 
+                    SetCloudDirectory[
+                    
+                    Information[#, 
+                    "DisplayName"]]; $CellContext`lvCloudDirectory = 
+                    If[$CloudRootDirectory === CloudDirectory[], 
+                    Select[
+                    CloudObjects[], StringMatchQ[
+                    Information[#, "DisplayName"], 
+                    Alternatives["Personal_", "Copied Files"]]& ], 
+                    CloudObjects[]], $CellContext`lvFileName = 
+                    Information[#, 
+                    "DisplayName"]]}]& , $CellContext`lvCloudDirectory], Null -> {
+                    Spacer[1]}]], Scrollbars -> {False, True}, 
+                    ImageSize -> {300, 140}, ImageSizeAction -> 
+                    "Scrollable"]}, {
+                    Spacer[10]}, {
+                    Style[
+                    Row[{
+                    Tooltip[
+                    ImageResize[
+                    Image[CompressedData["
+1:eJztXdluVDEMjYAHHvkFfgG1ZYfhkdciPqAVpUJCRWqRaKEwlO2vYFhKKVD2
+/wFscMVlNDfJzU1ie+ojnU73sX2yOrnJ8cVb89cPOefWjsKH+YU7l1ZXFzau
+HIMvrq6s3VheWbp2eeX20vLS6qnFw/DNm8Bl4BFnMBgMBoPBYDAYDAbJGI1G
+p4Cnue04aICYzyGHw+HmYDB4B3yPr/CjXz7C7+wg4e/uETf5vJgeoBYQ123g
+WxfQoCvx/6JOWNfqeqUXEKtZiNsrl1mLEEGndSwLdbzUAy492gg63S3tswZQ
+HNj1mESwbaOk71JBfrPHP4YHRSNqv147ATHvQtRnWts60GQGNHnjBMS5D6dN
+H9DlBLz8dAJim4NQxl7mjRAPcGzqBMSzBDX3QzgPdwJiWJIa27hafQuOKzA+
+nOM+KoPiAX3LScyHOKbyyjVfUqIPezuCY8IadoyT5gYiUaMdiy2fXH2dxPpT
+MRZdUF0bJ0yfym18NGLWd0pRwtpDTV26tue4/lbLthZyQ7K/nLr8WXPtaG82
+lFiPDLFjW8GqDRLalQcd7M0CrnEQzZ1i7BOzLgTl6UyMzRnBWRa98xtJuri/
+5WkvMqa9ISFPhjkazEE07aK9H2LWtpsE2y4khDoF7L42CXqMuG2IsPFbYqyj
+Qfu72H3VSKg7F1Ni3gHsPmol1J3vKQGPgdWZ/ixYd9h9084SdYdzbAbvvZVi
+c411pBRC3Tmf4k8bID73uXyB936UYjNH3iKGBdo1Nl9Am6cpBgvIdU4k2PUj
+xZ9J4J5r9tCGbY0gglnAPT6D93+WYrdkbTL2Oax+gDZPUoyW2qYhwbZPKT41
+Qc+kaNXmA7ftAfaCtJzuOH05adDmI7d9PkK5P+uPvh8KtGndN6FAm3P+6PtB
++7LZ/WhjoN7scdsXsD1pTt3wT+R6SMM/tfUGbH/sj34Q7D4E/Gt9Jl16vQH7
+PvtDHwS7Dz5SLmkiFGjzxR/6INh98FG5Nl/9oW8HPpvJbX+Ivj1G0rUhJsG0
+MW36MKCN6HGaM23YbQwwCRJyaSEGxgLS82nJ2hC4bZ9abShP3gfsPvgYmHtK
+12bXH3o/pJ9vEtBG7PoN2T70R98P6eecKNemtT2OgdR9RA3/fNrsctuXansM
+uPdx9PFPujbjz0F0hfRxdEAbsXs5nGkjWht/5OMguc8JaLPDbZ/H7ixnEHDv
+Twv4qFKbXOcPSM6radUmFPMukDrP0ahN33nNBD9F9jlKtcl67j6N99j96uKn
+VG3C0U4Ct0/qtSl1RpTEHIFp8x/Y/RvzVY02uccA45A2ntakTVyE+0HSmo4W
+bWqdRSgpx6ZFm9jY5oCUuhPQRsRz0qFzq3JDSr8T2MshQpv4qObDUMAdNoF6
+w/58ypDxzoLSbRu2B1hHMS9BnGt8ftJ3ZyT+jO6VbP7+/tdzFWxnvUuidNtW
+8n66kmeNgO4vStndBSX1KXnOMu1BKlWuxKBU31NYm61CNs+WsjkVJfJtffc7
+BOzNrk3t8XIX5B4badJGsi77yFl/CmvzMJedGnTZR64zI3AtHOeQA7qzmz5H
+bo/xjYfbjf+B94TvErPskSpZfkpB+pkefYntt+Y7qCXlRXMSdHmeNVCMkJA/
+yUVNfUssJK5pdyV3HqY0NPZD01hX2oD5Yw0aYV5M4jy/BqTqg2eTaR6D5QTW
+Iwl7R8GGkWnSjuG/O4ir3N1O7Za6+SM3qF/KOr6jPMHI9MgHWv+cwTpFXMdX
+nDsNGmdXYtzxa/w+1UFcO52hvz+Q/brBYDAYDAaDwWAwGAwGHfgNxfKfHA==
+
+                    "], "Byte", ColorSpace -> "RGB", Interleaving -> True], {
+                    20, 20}], 
+                    "Leave this field blank if you wish to save the file with \
+the same name."], 
+                    Spacer[10], 
+                    TextCell["File Name: "], 
+                    InputField[
+                    Dynamic[$CellContext`lvFileName], String], 
+                    Spacer[10], 
+                    Button[
+                    TextCell["Save"], 
+                    If[CloudDirectory[] =!= $CloudRootDirectory, If[
+                    
+                    StringMatchQ[$CellContext`lvFileName, 
+                    ""], $CellContext`lvFileName = Association[
+                    NotebookInformation[$CellContext`lvFileToSave]][
+                    "WindowTitle"]]; If[Length[
+                    Cases[
+                    Information[
+                    CloudObjects[], "DisplayName"], $CellContext`lvFileName]] > 
+                    0, CreateWindow[
+                    DialogNotebook[
+                    Column[{
+                    Item[
+                    TextCell[
+                    "File already exists!", FontFamily -> "Crimson Roman", 
+                    FontColor -> RGBColor["#36384C"]]], 
+                    Item[
+                    TextCell[
+                    "Do you want to overwrite this file?", FontFamily -> 
+                    "Crimson Roman", FontColor -> RGBColor["#36384C"]]], 
+                    Row[{
+                    Item[
+                    Button[
+                    TextCell["Yes"], CloudDeploy[$CellContext`lvFileToSave, 
+                    CloudObject[
+                    ToString[$CellContext`lvFileName]]]; NotebookClose[
+                    EvaluationNotebook[]]; NotebookOpen[
+                    CloudObject[
+                    ToString[$CellContext`lvFileName]]]; 
+                    NotebookClose[$CellContext`lvFileToSave], BaseStyle -> 
+                    RGBColor["#ffffff"], Background -> RGBColor["#36384C"]]], 
+                    Spacer[50], 
+                    Item[
+                    Button[
+                    TextCell["No"], 
+                    NotebookClose[
+                    EvaluationNotebook[]], BaseStyle -> RGBColor["#ffffff"], 
+                    Background -> RGBColor["#36384C"]]]}]}, 
+                    Alignment -> {Center}]], WindowSize -> All, WindowTitle -> 
+                    "Warning", Background -> RGBColor["#ffffff"]]; Null, 
+                    CloudDeploy[$CellContext`lvFileToSave, 
+                    CloudObject[
+                    ToString[$CellContext`lvFileName]]]; NotebookClose[
+                    EvaluationNotebook[]]; NotebookOpen[
+                    CloudObject[
+                    ToString[$CellContext`lvFileName]]]; 
+                    NotebookClose[$CellContext`lvFileToSave]]; NotebookClose[
+                    EvaluationNotebook[]]], BaseStyle -> RGBColor["#ffffff"], 
+                    Background -> RGBColor["#36384C"]]}], FontFamily -> 
+                    "Crimson Roman", FontColor -> RGBColor["#36384C"]]}], 
+                    Alignment -> Left], 
+                    TrackedSymbols :> {$CellContext`lvCloudDirectory}]]], 
+                    WindowSize -> {400, 265}, WindowTitle -> "Save New File", 
+                    TextAlignment -> Center, Background -> 
+                    RGBColor["#ffffff"]], CreateWindow[
+                    DialogNotebook[
+                    DynamicModule[{$CellContext`lvFilePath = StringTake[
+                    Information[
+                    Association[
+                    NotebookInformation[
+                    EvaluationNotebook[]]]["Uri"], "Path"], {
+                    Part[
+                    Part[
+                    StringPosition[
+                    Information[
+                    Association[
+                    NotebookInformation[
+                    EvaluationNotebook[]]]["Uri"], "Path"], "/"], 1], 
+                    1], -1}], $CellContext`lvFileToSave = 
+                    EvaluationNotebook[], $CellContext`lvCloudDirectory = 
+                    If[$CloudRootDirectory === CloudDirectory[], 
+                    Select[
+                    CloudObjects[], StringMatchQ[
+                    Information[#, "DisplayName"], 
+                    Alternatives["Personal_", "Copied Files"]]& ], 
+                    CloudObjects[]], $CellContext`lvFileName = Association[
+                    NotebookInformation[
+                    EvaluationNotebook[]]]["WindowTitle"]}, 
+                    Column[{
+                    Row[{
+                    Item[
+                    TextCell[
+                    "Do you wish to quick save?", FontFamily -> 
+                    "Crimson Roman", FontColor -> RGBColor["#36384C"]]], 
+                    Spacer[5], 
+                    Item[
+                    Tooltip[
+                    ImageResize[
+                    Image[CompressedData["
+1:eJztXdluVDEMjYAHHvkFfgG1ZYfhkdciPqAVpUJCRWqRaKEwlO2vYFhKKVD2
+/wFscMVlNDfJzU1ie+ojnU73sX2yOrnJ8cVb89cPOefWjsKH+YU7l1ZXFzau
+HIMvrq6s3VheWbp2eeX20vLS6qnFw/DNm8Bl4BFnMBgMBoPBYDAYDAbJGI1G
+p4Cnue04aICYzyGHw+HmYDB4B3yPr/CjXz7C7+wg4e/uETf5vJgeoBYQ123g
+WxfQoCvx/6JOWNfqeqUXEKtZiNsrl1mLEEGndSwLdbzUAy492gg63S3tswZQ
+HNj1mESwbaOk71JBfrPHP4YHRSNqv147ATHvQtRnWts60GQGNHnjBMS5D6dN
+H9DlBLz8dAJim4NQxl7mjRAPcGzqBMSzBDX3QzgPdwJiWJIa27hafQuOKzA+
+nOM+KoPiAX3LScyHOKbyyjVfUqIPezuCY8IadoyT5gYiUaMdiy2fXH2dxPpT
+MRZdUF0bJ0yfym18NGLWd0pRwtpDTV26tue4/lbLthZyQ7K/nLr8WXPtaG82
+lFiPDLFjW8GqDRLalQcd7M0CrnEQzZ1i7BOzLgTl6UyMzRnBWRa98xtJuri/
+5WkvMqa9ISFPhjkazEE07aK9H2LWtpsE2y4khDoF7L42CXqMuG2IsPFbYqyj
+Qfu72H3VSKg7F1Ni3gHsPmol1J3vKQGPgdWZ/ixYd9h9084SdYdzbAbvvZVi
+c411pBRC3Tmf4k8bID73uXyB936UYjNH3iKGBdo1Nl9Am6cpBgvIdU4k2PUj
+xZ9J4J5r9tCGbY0gglnAPT6D93+WYrdkbTL2Oax+gDZPUoyW2qYhwbZPKT41
+Qc+kaNXmA7ftAfaCtJzuOH05adDmI7d9PkK5P+uPvh8KtGndN6FAm3P+6PtB
++7LZ/WhjoN7scdsXsD1pTt3wT+R6SMM/tfUGbH/sj34Q7D4E/Gt9Jl16vQH7
+PvtDHwS7Dz5SLmkiFGjzxR/6INh98FG5Nl/9oW8HPpvJbX+Ivj1G0rUhJsG0
+MW36MKCN6HGaM23YbQwwCRJyaSEGxgLS82nJ2hC4bZ9abShP3gfsPvgYmHtK
+12bXH3o/pJ9vEtBG7PoN2T70R98P6eecKNemtT2OgdR9RA3/fNrsctuXansM
+uPdx9PFPujbjz0F0hfRxdEAbsXs5nGkjWht/5OMguc8JaLPDbZ/H7ixnEHDv
+Twv4qFKbXOcPSM6radUmFPMukDrP0ahN33nNBD9F9jlKtcl67j6N99j96uKn
+VG3C0U4Ct0/qtSl1RpTEHIFp8x/Y/RvzVY02uccA45A2ntakTVyE+0HSmo4W
+bWqdRSgpx6ZFm9jY5oCUuhPQRsRz0qFzq3JDSr8T2MshQpv4qObDUMAdNoF6
+w/58ypDxzoLSbRu2B1hHMS9BnGt8ftJ3ZyT+jO6VbP7+/tdzFWxnvUuidNtW
+8n66kmeNgO4vStndBSX1KXnOMu1BKlWuxKBU31NYm61CNs+WsjkVJfJtffc7
+BOzNrk3t8XIX5B4badJGsi77yFl/CmvzMJedGnTZR64zI3AtHOeQA7qzmz5H
+bo/xjYfbjf+B94TvErPskSpZfkpB+pkefYntt+Y7qCXlRXMSdHmeNVCMkJA/
+yUVNfUssJK5pdyV3HqY0NPZD01hX2oD5Yw0aYV5M4jy/BqTqg2eTaR6D5QTW
+Iwl7R8GGkWnSjuG/O4ir3N1O7Za6+SM3qF/KOr6jPMHI9MgHWv+cwTpFXMdX
+nDsNGmdXYtzxa/w+1UFcO52hvz+Q/brBYDAYDAaDwWAwGAwGHfgNxfKfHA==
+
+                    "], "Byte", ColorSpace -> "RGB", Interleaving -> True], {
+                    30, 30}], 
+                    StringJoin[
+                    "Quick saving will push the edits in this file to the \
+cloud immediately.\n\nFile location: ", $CellContext`lvFilePath]]]}], 
+                    Row[{
+                    Item[
+                    Button[
+                    TextCell["Yes"], SetCloudDirectory[]; 
+                    CloudDeploy[$CellContext`lvFileToSave, 
+                    CloudObject[
+                    ToString[$CellContext`lvFilePath]]]; NotebookClose[
+                    EvaluationNotebook[]], BaseStyle -> RGBColor["#ffffff"], 
+                    Background -> RGBColor["#36384C"]]], 
+                    Spacer[50], 
+                    Item[
+                    Button[
+                    TextCell["No"], NotebookClose[
+                    EvaluationNotebook[]]; CreateWindow[
+                    DialogNotebook[
+                    Column[{
+                    Row[{
+                    Item[
+                    TextCell[
+                    "Do you wish to rename or save the file in a new \
+location?", FontFamily -> "Crimson Roman", FontColor -> RGBColor["#36384C"]]], 
+                    Spacer[5], 
+                    Item[
+                    Tooltip[
+                    ImageResize[
+                    Image[CompressedData["
+1:eJztXdluVDEMjYAHHvkFfgG1ZYfhkdciPqAVpUJCRWqRaKEwlO2vYFhKKVD2
+/wFscMVlNDfJzU1ie+ojnU73sX2yOrnJ8cVb89cPOefWjsKH+YU7l1ZXFzau
+HIMvrq6s3VheWbp2eeX20vLS6qnFw/DNm8Bl4BFnMBgMBoPBYDAYDAbJGI1G
+p4Cnue04aICYzyGHw+HmYDB4B3yPr/CjXz7C7+wg4e/uETf5vJgeoBYQ123g
+WxfQoCvx/6JOWNfqeqUXEKtZiNsrl1mLEEGndSwLdbzUAy492gg63S3tswZQ
+HNj1mESwbaOk71JBfrPHP4YHRSNqv147ATHvQtRnWts60GQGNHnjBMS5D6dN
+H9DlBLz8dAJim4NQxl7mjRAPcGzqBMSzBDX3QzgPdwJiWJIa27hafQuOKzA+
+nOM+KoPiAX3LScyHOKbyyjVfUqIPezuCY8IadoyT5gYiUaMdiy2fXH2dxPpT
+MRZdUF0bJ0yfym18NGLWd0pRwtpDTV26tue4/lbLthZyQ7K/nLr8WXPtaG82
+lFiPDLFjW8GqDRLalQcd7M0CrnEQzZ1i7BOzLgTl6UyMzRnBWRa98xtJuri/
+5WkvMqa9ISFPhjkazEE07aK9H2LWtpsE2y4khDoF7L42CXqMuG2IsPFbYqyj
+Qfu72H3VSKg7F1Ni3gHsPmol1J3vKQGPgdWZ/ixYd9h9084SdYdzbAbvvZVi
+c411pBRC3Tmf4k8bID73uXyB936UYjNH3iKGBdo1Nl9Am6cpBgvIdU4k2PUj
+xZ9J4J5r9tCGbY0gglnAPT6D93+WYrdkbTL2Oax+gDZPUoyW2qYhwbZPKT41
+Qc+kaNXmA7ftAfaCtJzuOH05adDmI7d9PkK5P+uPvh8KtGndN6FAm3P+6PtB
++7LZ/WhjoN7scdsXsD1pTt3wT+R6SMM/tfUGbH/sj34Q7D4E/Gt9Jl16vQH7
+PvtDHwS7Dz5SLmkiFGjzxR/6INh98FG5Nl/9oW8HPpvJbX+Ivj1G0rUhJsG0
+MW36MKCN6HGaM23YbQwwCRJyaSEGxgLS82nJ2hC4bZ9abShP3gfsPvgYmHtK
+12bXH3o/pJ9vEtBG7PoN2T70R98P6eecKNemtT2OgdR9RA3/fNrsctuXansM
+uPdx9PFPujbjz0F0hfRxdEAbsXs5nGkjWht/5OMguc8JaLPDbZ/H7ixnEHDv
+Twv4qFKbXOcPSM6radUmFPMukDrP0ahN33nNBD9F9jlKtcl67j6N99j96uKn
+VG3C0U4Ct0/qtSl1RpTEHIFp8x/Y/RvzVY02uccA45A2ntakTVyE+0HSmo4W
+bWqdRSgpx6ZFm9jY5oCUuhPQRsRz0qFzq3JDSr8T2MshQpv4qObDUMAdNoF6
+w/58ypDxzoLSbRu2B1hHMS9BnGt8ftJ3ZyT+jO6VbP7+/tdzFWxnvUuidNtW
+8n66kmeNgO4vStndBSX1KXnOMu1BKlWuxKBU31NYm61CNs+WsjkVJfJtffc7
+BOzNrk3t8XIX5B4badJGsi77yFl/CmvzMJedGnTZR64zI3AtHOeQA7qzmz5H
+bo/xjYfbjf+B94TvErPskSpZfkpB+pkefYntt+Y7qCXlRXMSdHmeNVCMkJA/
+yUVNfUssJK5pdyV3HqY0NPZD01hX2oD5Yw0aYV5M4jy/BqTqg2eTaR6D5QTW
+Iwl7R8GGkWnSjuG/O4ir3N1O7Za6+SM3qF/KOr6jPMHI9MgHWv+cwTpFXMdX
+nDsNGmdXYtzxa/w+1UFcO52hvz+Q/brBYDAYDAaDwWAwGAwGHfgNxfKfHA==
+
+                    "], "Byte", ColorSpace -> "RGB", Interleaving -> True], {
+                    30, 30}], 
+                    "Renaming or saving the file in another location will \
+remove the old file."]]}], 
+                    Row[{
+                    Item[
+                    Button[
+                    TextCell["Yes"], NotebookClose[
+                    EvaluationNotebook[]]; CreateWindow[
+                    DialogNotebook[
+                    Dynamic[
+                    Column[
+                    Join[{
+                    Row[{
+                    ImageResize[
+                    Image[CompressedData["
+1:eJztnE2M1VQYhuvPwsSNa+NGE6PEEI0RRI3JdeHCGDYYN8bNEEYyCwadQRBR
+O8AAUYPGGE3UGI0uXelCEZELKP5FwURd6JYY1y7RoZf3C98l5c5pb0/b03Pa
+vk/ykMydS3vO985pT39v3rx901NXR1G0eB3+2TSz66GFhZndj92AHx6fX5zb
+Oj+75ZH5HbNbZxc2bL4GH87CeXhtRAghhBBCCCGEEEIIIYQQQvrOcDi8Ht4E
+b4Fr4Fp4F7wb3gPXwfXwXrhBXe+73T3hCDwHz8ORwSTj8zyTOI53N9qL7nNj
+ZJ9DWSW/nQ31q6v8A/+LmsvsssjuuSY62FFWIg+ZpUyw77vDfTe7A/7eN0Z+
+M0uPvR2u+9sVUKtHowAyGzsYDI5g7N3uuNutB7m9FAWQ16Ro1zNOO95yUJ+5
+KICcTOrY437PAHKbiQLIKE+08Vl3FWgnqMmTUQDZFDAJSdRtj89jGKx7S+Q/
+k9bq69wP1rutbJvpJbEPvt++8tXQYybvfW+zmD8dta98NXQb7b3vbRa5nbAu
+fEV0++y97x2wUZhba3PjdrKdue2qse19tlGYWy2uWBe+Ii5zwzzrZ3gWnoG/
+pDyjn59N/V6++yP8Dp6G38BTMleDQ3gcfp3yeI0O1RPqSfWUKm35Fn6vntbf
+fwk/g+81mZlQZ25SexyDPtB0H/pIXfMSLGe58cb3mDpywzIONN/yflP1+A3/
+/6CHZveeGo67jeg9sHfK/lPWodc9XpDr63AJ7pNxCg/Bl+Er8FV4GL4GX4dv
+wDfh2/Bd+AH8CH6sfgjfh+/At/T7h3VZh3T5y3C/rk/ca3Bfyv0pl9UD6kHD
+Mvdqf8YspX92mNvzZTOTtpuWifnJ52WX2UHlWt1Sfgr2yDio0KZVILMvauhr
+56z7Wk/Z3Ez7NV4TyjWZloUNZXPD38+DhsWVeV6gN8ozL7lhWCBzBdv1Y1v4
+q2E5i77rEroyT5uWR1HK5GaaJ1XcT/bF2iiTW8aifNckaLXOtWE7TjLGGq+9
+lqhbFWxzwzb6PsNivNclcGudSwo2x92m+1/iS88e+q5L0Na9jRRscosN9+fG
+gT4XEpAXpqdgj+V5LhO+6xKyiV7frJ2iucWG+6l1X+u7NiHrZKwJFuPNhO+6
+hGwSO3x+tkhuGWOt9HWEnuhsrAlFjgNM22i57lSxX11WxprTZ/YK5JZ17OG7
+NiHrdKwJ03Lj3N9ap/u1MVPOT3Ks2XsBNX1iStkrk5dbxljjef8c44beXWWb
+22Aw+KloH3qobCO3FSx9JXJyW7WNlPcTFmx/X3U+HxmTlVvGMduLOW3uvU1t
+I4WcLEx4r03ANjbWBFNuei5k8nu8Npqjafvkkozc9kx+T54bmvwevWyjY00w
+HEOb5iPrIj/1aIOJ3svWKJO5mcZayXuH+mLjz5oKmlv63VMmeD+rWRlrXt63
+qPu38bvCTOdHOB/JdgX7kFstyl0bug0c52aaE3GsmfWyXxuTzs3wu50Rc8tS
+zh8/bFHqWtF5iPH+lZjvyMgywXHRJ1aFrhndNnI+YqeMtZliFXaDzEVM59X0
+2h9zW63U5LxVkR0gmWXcCzHe5/muU2jKWJuzKLETMI+9bfIztGt7xMxMSk3+
+typwgyC3pyPmZsxNaxMq3Eaa9XJOqwipscbsrlTG2kKV2rpE3mOh73lLe9Tg
+V+oxtci76ia/84M8Kw5/h3/A39Q/4d/wXziq0b90nSd1/dP6dCz12ae+s+kK
+o9HoqrS+20MIIYQQQgghhBBCCCGEEEIIIYT0jYuTYHmQ
+                    "], "Byte", ColorSpace -> "RGB", Interleaving -> True], {
+                    20, 20}], 
+                    Spacer[5], 
+                    TextCell[
+                    If[$CloudRootDirectory === CloudDirectory[], "Home", 
+                    Information[
+                    CloudDirectory[], "DisplayName"]], FontFamily -> 
+                    "Crimson Roman", FontColor -> RGBColor["#36384C"], Bold], 
+                    If[$CloudRootDirectory === CloudDirectory[], 
+                    Spacer[195], 
+                    Spacer[
+                    Max[230 - 7 Length[
+                    Characters[
+                    Information[
+                    CloudDirectory[], "DisplayName"]]], 0]]], 
+                    EventHandler[
+                    ImageResize[
+                    Image[CompressedData["
+1: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
+                    "], "Byte", ColorSpace -> "RGB", Interleaving -> True], 
+                    25], {"MouseClicked" :> (SetCloudDirectory[
+                    ParentDirectory[
+                    CloudDirectory[]]]; $CellContext`lvCloudDirectory = 
+                    If[$CloudRootDirectory === CloudDirectory[], 
+                    Select[
+                    CloudObjects[], StringMatchQ[
+                    Information[#, "DisplayName"], 
+                    Alternatives["Personal_", "Copied Files"]]& ], 
+                    CloudObjects[]])}], 
+                    EventHandler[
+                    ImageResize[
+                    Image[CompressedData["
+1:eJztnd1uFDcYhi3aAw65hV5DC00aKqWHPQVxASBS1JNUCkgtFBqp11XYBMpP
+pUr0itLarU2my9r+vhl7PD/PI71EKLPfzM4+6/F4nJnP7v1w67srxpiHV+0/
+t+7++M3Jyd3Ht6/Z/9w5fvj9g+Oj+98ePzp6cHSyd+8Tt5jNrzafGgAAAAAA
+AAAAAJByenr6bLPZ7LfeDmiHdeBn++NvF+vCXuvtgfHpOmBwYZVYB56aLQcM
+LqyKw8PDjYk4EOLbClgoEgfMpQtPW20n1MM68NwIHTC4sEisAy+M0gFz6cIz
+6Xps3+KmXdc7mz86P0Pe2ryxeVn23YGEIQ4YZbvgPBDWhJHwY0ODPn+jdMGu
+80BYD0ZA44A7T7Sf8RPJsjkXbK2vhOuFyigduBFet2tcaVdSLuDBNJA6YPsM
+57uuKaTGl8z/Xdg5vqBwECqhcGCTqjPEBTxoiz+3G+xAp57Ihe16eNAOhQMv
+lHWlLpyH1/hrE3gwMgoHnsdq+L5drL7UhTNf64Zk+b7vFz5G6kCqfx/OEbrf
+6dgyuTjXrAdfSJbt/66hS0kHzOXneBZbVtHeSwMDUfTnUw7srJFx4UvJeoWB
+AQw9v5fUSJ1TKI7/eFCJMRwIce2C//5/RKF2AXpQyAFRf6+b7rjzNgOvY4KS
+Vg6EVHIBFPh+WzMHQiq4AEIUDjyJ1ZBeT5aksAsgQDqfNNaXc5R0ICTjnKbd
+gQzSdiDlQJ85qdKUcEEz53GNKBxItdHVHAgp5AJzobfQjNu2diCkkAv8vYyn
+oAOD5yVrQ7tQBqkD7jNOjO+VGuvFhQYoHPgtUaOpAyG40I9CDlyX1BgrJcay
+tHOm5oxin0y+HdgOLsgo4UCJceKaKeTCJrkjZ4ziOFlqzK5ZSsxnSdWYK4Uc
+KD5OXDOFXFhMu7CmdmA7pdqF1Bj6HFizAyGl5rmlxtCmzBqPBbH4cbDru96j
+O4cucV1liuBA9HP8PPZ+FdfaZ+GCYh7ZqhwIWYMLODCeC1O9VqnY/sexGnPv
+EypykXHhTLgvJ+VCifZM+t4XlAv7Of4U2x/SdnEqLkiv+8f6y77GmaTGArMI
+F6T9gUw7cC6pseBcZI6VIhdajzXlXMCB+i5M5d7gMRcyc4pf7nrNmqMdV/X3
++5qEA4GuC7lrZSvuD2STejZM14XUvTta48dIs/MoaAuSHhyk9p37vi1lDhv9
+gqQHN4fs2zmBB3jg4LiAB46cB+73Nq/9Mwve+mcZdBOeZeCW+d0vv8nUdM9A
++NPmvc9fnbz3vwvPSXjtaybbLdfftXnV2cbu8xbCdoZtDdubrLkyD16ZyH7o
+OzaWujbh16dGML++L3hgqnkQHc/Cg2mS8aDXOdFp4p6K7tjRpyYe1KVSe5Dy
+YE7twdcD6s6KGXmQu396X/DA4EGqJseFwf2DX2I1B3iQe85OX/DA4EGqJh58
+8KDXPaTwYH5U8qBG/wAPKjIjD+gnVqSBB72eqdzIg+T8gyVRqZ+YGlfGgwlS
+yYPUdSY8mCApD2qkogfFgwd4YP7zIPocwaWBB3jgaOBBrfNGPBgAHuCBg+MC
+HjjGnq+MB9OE9gAPHHiABw6OC3jgwIOkB2saT8QDPMADPPiXGfUTD8bcTmNW
+Nw9l7Pag73hiCw9W8/cLrk/s2lz390LuHkrC7O2IZNn9Id+xzrZqt02b/TWd
+KwAAAAAAAAAAAAAAAAAAAAAAAADAsvkHdx9lxw==
+                    "], "Byte", ColorSpace -> "RGB", 
+                    ImageSize -> {51.10000000000002, Automatic}, Interleaving -> 
+                    True], 25], {"MouseClicked" :> (
+                    SetCloudDirectory[]; $CellContext`lvCloudDirectory = 
+                    If[$CloudRootDirectory === CloudDirectory[], 
+                    Select[
+                    CloudObjects[], StringMatchQ[
+                    Information[#, "DisplayName"], 
+                    Alternatives["Personal_", "Copied Files"]]& ], 
+                    CloudObjects[]])}]}, Frame -> True, FrameStyle -> 
+                    Directive[
+                    Thickness[1], 
+                    RGBColor[
+                    CloudSymbol[
+                    "https://www.solomon.lab.centcorp.tech/obj/solomon/\
+CloudSymbol/COLOR-DarkNavy"]["HexCode"]]]]}, {
+                    Spacer[10]}, {
+                    Pane[
+                    Column[
+                    ReplaceAll[
+                    Map[EventHandler[
+                    Row[{
+                    If[Information[#, "FileType"] === Directory, 
+                    ImageResize[
+                    Image[CompressedData["
+1:eJztnE2M1VQYhuvPwsSNa+NGE6PEEI0RRI3JdeHCGDYYN8bNEEYyCwadQRBR
+O8AAUYPGGE3UGI0uXelCEZELKP5FwURd6JYY1y7RoZf3C98l5c5pb0/b03Pa
+vk/ykMydS3vO985pT39v3rx901NXR1G0eB3+2TSz66GFhZndj92AHx6fX5zb
+Oj+75ZH5HbNbZxc2bL4GH87CeXhtRAghhBBCCCGEEEIIIYQQQvrOcDi8Ht4E
+b4Fr4Fp4F7wb3gPXwfXwXrhBXe+73T3hCDwHz8ORwSTj8zyTOI53N9qL7nNj
+ZJ9DWSW/nQ31q6v8A/+LmsvsssjuuSY62FFWIg+ZpUyw77vDfTe7A/7eN0Z+
+M0uPvR2u+9sVUKtHowAyGzsYDI5g7N3uuNutB7m9FAWQ16Ro1zNOO95yUJ+5
+KICcTOrY437PAHKbiQLIKE+08Vl3FWgnqMmTUQDZFDAJSdRtj89jGKx7S+Q/
+k9bq69wP1rutbJvpJbEPvt++8tXQYybvfW+zmD8dta98NXQb7b3vbRa5nbAu
+fEV0++y97x2wUZhba3PjdrKdue2qse19tlGYWy2uWBe+Ii5zwzzrZ3gWnoG/
+pDyjn59N/V6++yP8Dp6G38BTMleDQ3gcfp3yeI0O1RPqSfWUKm35Fn6vntbf
+fwk/g+81mZlQZ25SexyDPtB0H/pIXfMSLGe58cb3mDpywzIONN/yflP1+A3/
+/6CHZveeGo67jeg9sHfK/lPWodc9XpDr63AJ7pNxCg/Bl+Er8FV4GL4GX4dv
+wDfh2/Bd+AH8CH6sfgjfh+/At/T7h3VZh3T5y3C/rk/ca3Bfyv0pl9UD6kHD
+Mvdqf8YspX92mNvzZTOTtpuWifnJ52WX2UHlWt1Sfgr2yDio0KZVILMvauhr
+56z7Wk/Z3Ez7NV4TyjWZloUNZXPD38+DhsWVeV6gN8ozL7lhWCBzBdv1Y1v4
+q2E5i77rEroyT5uWR1HK5GaaJ1XcT/bF2iiTW8aifNckaLXOtWE7TjLGGq+9
+lqhbFWxzwzb6PsNivNclcGudSwo2x92m+1/iS88e+q5L0Na9jRRscosN9+fG
+gT4XEpAXpqdgj+V5LhO+6xKyiV7frJ2iucWG+6l1X+u7NiHrZKwJFuPNhO+6
+hGwSO3x+tkhuGWOt9HWEnuhsrAlFjgNM22i57lSxX11WxprTZ/YK5JZ17OG7
+NiHrdKwJ03Lj3N9ap/u1MVPOT3Ks2XsBNX1iStkrk5dbxljjef8c44beXWWb
+22Aw+KloH3qobCO3FSx9JXJyW7WNlPcTFmx/X3U+HxmTlVvGMduLOW3uvU1t
+I4WcLEx4r03ANjbWBFNuei5k8nu8Npqjafvkkozc9kx+T54bmvwevWyjY00w
+HEOb5iPrIj/1aIOJ3svWKJO5mcZayXuH+mLjz5oKmlv63VMmeD+rWRlrXt63
+qPu38bvCTOdHOB/JdgX7kFstyl0bug0c52aaE3GsmfWyXxuTzs3wu50Rc8tS
+zh8/bFHqWtF5iPH+lZjvyMgywXHRJ1aFrhndNnI+YqeMtZliFXaDzEVM59X0
+2h9zW63U5LxVkR0gmWXcCzHe5/muU2jKWJuzKLETMI+9bfIztGt7xMxMSk3+
+typwgyC3pyPmZsxNaxMq3Eaa9XJOqwipscbsrlTG2kKV2rpE3mOh73lLe9Tg
+V+oxtci76ia/84M8Kw5/h3/A39Q/4d/wXziq0b90nSd1/dP6dCz12ae+s+kK
+o9HoqrS+20MIIYQQQgghhBBCCCGEEEIIIYT0jYuTYHmQ
+                    "], "Byte", ColorSpace -> "RGB", Interleaving -> True], {
+                    20, 20}], 
+                    ImageResize[
+                    Image[CompressedData["
+1:eJztXQeYFEUWHm9RkIOTFRBQQVYMqKAiBkynopjOiKKAegqKGFEBxZzOgOkE
+Axg/PXW5xUNP9EwoYjj1zDnL5pxznqmrv3a7+3VPT3fP7ExPz1T/31cM3V2p
+66+uevXeq9qsuZdNP/8PgUBg0QD+z/Q5Sw5buHDONacM4RczFiy6cP6Ceecd
+s2DxvPnzFk6Zm8Fv3twb+gX6jsGDBw+bPXv2PcuXL8/Nzs4OrVq1ivkh8QFt
+jTZH24ODOFAZNbKysiavXLmyPNltIXsAB+DCTe7R53zuvRPAhZvjAMYdWv6G
+DRtYbW0t8+EO0NZoc8oBOHGLf8w9lPtQKJTsJpEOaHPaB8CJW/xz+SOolOt/
+98kD2l7hATJhRkZGPMT6iNh8k8DApQMDT/42fFO2MTOgC3lZmaz+wXuS3STS
+IScnR+0DAwcOHJJI/h8cFHjRyLsxNK1ZlewmkQpr1qxxjf+fMwNBO/7Lzzo5
+2U0iFdzk/9fMQMiO/4rzz0h2k0gFT/E/9A+s9f13kt0kUiEZ/P+y7SD247hh
+IhTsvh0r2GMsKz3+UNay7tVkN4d0cJP/rzMDHe8MCbBV2dlqmT6SCzf5n9E/
+sOSlLQI6vZOP5MJN/oGDNw3M8vn3DtzmH/D59w58/uWGz7/c8PmXG27y79t/
+vAc3+fftP96Db/+JD9o+/iDZVYgJntL/p6j9p+OHb1nuyP7iN9XgKf5T1P4D
+2wXqj99Ug2//6RuaX3pe14eb/7062VWKCr79J3aE2lpZwcQxOv5xjfupAt/+
+Eztql95kOo/hfqrAt//Ehq7CfC7zDVA5r7xsnvp/3MfzVICM+r+Gpx5hXSVF
+fcqj/JwZKt+l048U9/CrrmPPPrVP+XeVFot6Jhoy8l960uEsd3g/VnHuTNb+
+xSdRp2/9YIP2rfN8On/5UdzHL66VZ7GsZdq//JRVzJvNcrfalJUcd0jU6aOF
+jPxDx0Dn65Ij9xdyfKiryzYt4hQdOFFNW33t5brnuFaeFR0wwXGezWv/xUqO
+PlCvC+H9M9GQkf+am64yldsgu9c9cDcL1tdFTNvw2INq/Pwdh7NgQ73uOa5x
+X4mD+JGAuPUP3SvWwGb1qb5+UdzeORJktP/UP3yfpQ4yd5s/sqorL2adv/+q
+S9ddUy3qqcRrfOZx0/wbn31C915IR9G58TdWveRSUY5VPdxoDxntP00v/NOy
+DmrYchNWNvM41vreepGuauEF6rPiQ/fiH3DQvAB+v3jq3mpcpAMgD5TNOl7k
+66R8N9pCRvtP24fvmZZdPHUfVnrCYabPivbfTeinleu2Tz+yLoM/p3ptyAJm
++ULvWXzEfqbPIGcmGp7S/2e6Y//p/P0XrcxhGTqeWt99m3V8/w2rvPgcljti
+M/M6zj/TUTmIZzq/8HwrLzqbdXz7lSiP9itaH9Qz0fAU/y7Zf0KtLZrMt+s2
+rGLu6ZpMt/NI1l1ZIeLhF7q8/J220tUTuh4nqLr8fF06yIW1d97I8y1X888f
+P0ob++acxgomjFavUc9EQ1b7T97owT3fIl+vQw4vnLS9NiafPE03t4fa24Wc
+TrlszH7KMv/GVU+HyXLIR8s0JMpRnqN81APrflyjfm5AVvtP4T47q22P77H9
+q891433d/XeGpam+eoE2ho8cwNq/+dI0b9ynumHI+kYgfzUvznn7l5+J8UDt
+D7x+bkBW+w+V8zAPA/Ur7tfNw03PP6f7ZkOdnazkmIO0uYOPW8HaGl2+uC7Y
+M0uNU3LUASKdmkdHh8iXzvMoF4DcoY5BvH5uQFb7T8V5s9S2bnnrtZ6bfEwu
+m32CbtzG+h3zONYMeN5dXsrlgRHq87IZx2hzBf/FtTrf83iIj3RIj3yo/kCk
+5+tB1nv+Ucvbr2syJq+fG5BR/wfU3HilNpcTPQ7sQpHkU8hmNTcvYQ1PrtDp
++SHTAfhVx3T+vOGJh0V8KtMZA7VDNT73pHof9XMDsvJPdYC19/xNe9Ddbbk+
+VQPV4fD/Q1drvOckLcpTUHff7dqcwOvnBmTiP9TSLHQqdcuWsuJpU9S2rrpi
+vi6e+r1PHCNsejW3Xaeb02MJSI98On/9Saw5Vf4JqH4RNinUE/MG6p0opC3/
+fE4Fd1inYd4tOngPvZ6FzvHbbcG6igvVpPDlVe7T/No++ZBVLbqQ5e8wzBHn
+iFe1+KIeXSE54xD59qwh+qv3UH7e2CHmeXFZsejPe4r+gffp/O1nXX59QbrY
+f2Bjgf6g9o4bhB+G0sZOg7C198pxSlod/wSQ51ve/I+wz+aO2lyXT+7WA8V9
+PKdyP0VY/rxcxYfYaUBfKT3lKKGfgtwYrIvtHMVUt/9UX3sFK9x7R2dttu0g
+4ftRc+s1rOX1l8WeDbpOx3gL5I8b2nOPjxd2CDY36crAtR3U8YGXA9Qtv0vr
+P7w+GPObX32J1dxytVgHot5O3q9w751Y9XULo2q/VLf/tH/+v7BvUJGxYLOp
+vPRc1viPx1jHj9/pZC0FDY8/pLX9iM2E7oba452AlhtNfJQD3QPVO9U/+kB4
+Al5v6AYann6UVV4ylxXut4upfIl2wBwVDTyl/8+Mzf7T8sYrurkdttdgY4Oz
+xFjzn3q09g3xtoUNQLl2ooOPhn/4hqvfPy9HcNl7jXo4ndehK6Y2Zrx/y2tr
+HaWl8BT/fbD/4BunecHHxym6K8oiynRWvkAKouEf+ZmVg/KFrsghMDfQ9LH6
+iqaT/cfoj286lkYAvh0zXhRboBWi4b+7usq0HMz3TkHnLATIvLEi3ew/mB/p
+eAK/SsdpiQ+/EroK8mzTRcM/8jOW4dSeDDS/vEY311VeMqdPa8G0s/9wWYnq
+4LHGbvvofUdJIbsb1xLNr7wY2c+rF4755/kgP53MPnkHR2sGwLhegbzgxL/Y
+Culo/4HMBl8upZ2wVu74+YfICXifwdwD/wtF96Obm8ePYlVXXdLTj0z6giX/
+PD7SIT319aD9E/4nYu4zWZ8ogC6L2o4g+8VDL5iu+r/uqkrxbalrrQmjw/b8
+YE0IvT2V9+1CwW7bijV2+2cfq+NuGP/8Pp4jnpXtJ6yf8XpU37C4Z61KgL1A
+NJ/CvcaJ94sH0pV/oDP3d50vPvZtwPe6fuUyVnzIJEsu4JMB/qifSFhf4Jwg
+Dr1nxznyQxzFzydSKD5sMqt/ZLl4h6KDdtetE/AO8UI68w/ArwY6Wbtvz+jr
+iT6iAOd61N5+vWVfsApIh/T0fBDkb+xvtnXk74H9YfFEuvMP4EwG0/F23FAx
+L0MmU3W+PGBvZySAQ9jxqL+gKef8OeJZnQlD95Ci/OaXXxD7TvK239I0z6YX
+c+LeNuli/4kE+FuVnjhV+4aG92PlZ5woOMczBOp/j2812NToKO/Wd9/S+48j
+8GvcdwKUQ8cU1EOpE/oCfJGon0npSUeIZ/FEqtt/LMHlMOrnJXSkBh0TfDPp
++Nrx0/eOsy//63TTd8B9p0B5dH4y+orCjkjX+0I/Hse/l5fq9h8rCJ8ckjf8
+qygwnur63vPPOc4bvl20XwnfHcITnjuF8Ae1GOfpfkKEePqGeUr/nxm//T86
+X95MnMlys+652KtP9l/Cr8MpOr77WqcnqL3rFnEfv+pYgvPgeDynQPlqWl4v
+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
+8QFtjTbHmN+X7/7/VFbJ/g==
+                    "], "Byte", ColorSpace -> "RGB", 
+                    ImageResolution -> {120., 120.}, ImageSize -> {
+                    51.59999999999995, Automatic}, Interleaving -> True], {20,
+                     20}]], 
+                    Spacer[10], 
+                    TextCell[
+                    Mouseover[
+                    Information[#, "DisplayName"], 
+                    Style[
+                    Information[#, "DisplayName"], 
+                    RGBColor["#B87333"]]], FontFamily -> "Crimson Roman", 
+                    FontColor -> RGBColor["#36384C"], Bold]}], {
+                    "MouseClicked" :> If[Information[#, "FileType"] === 
+                    Directory, SetCloudDirectory[
+                    
+                    Information[#, 
+                    "DisplayName"]]; $CellContext`lvCloudDirectory = 
+                    If[$CloudRootDirectory === CloudDirectory[], 
+                    Select[
+                    CloudObjects[], StringMatchQ[
+                    Information[#, "DisplayName"], 
+                    Alternatives["Personal_", "Copied Files"]]& ], 
+                    CloudObjects[]], $CellContext`lvFileName = 
+                    Information[#, 
+                    "DisplayName"]]}]& , $CellContext`lvCloudDirectory], Null -> {
+                    Spacer[1]}]], Scrollbars -> {False, True}, 
+                    ImageSize -> {300, 140}, ImageSizeAction -> 
+                    "Scrollable"]}, {
+                    Spacer[10]}, {
+                    Style[
+                    Row[{
+                    Tooltip[
+                    ImageResize[
+                    Image[CompressedData["
+1:eJztXdluVDEMjYAHHvkFfgG1ZYfhkdciPqAVpUJCRWqRaKEwlO2vYFhKKVD2
+/wFscMVlNDfJzU1ie+ojnU73sX2yOrnJ8cVb89cPOefWjsKH+YU7l1ZXFzau
+HIMvrq6s3VheWbp2eeX20vLS6qnFw/DNm8Bl4BFnMBgMBoPBYDAYDAbJGI1G
+p4Cnue04aICYzyGHw+HmYDB4B3yPr/CjXz7C7+wg4e/uETf5vJgeoBYQ123g
+WxfQoCvx/6JOWNfqeqUXEKtZiNsrl1mLEEGndSwLdbzUAy492gg63S3tswZQ
+HNj1mESwbaOk71JBfrPHP4YHRSNqv147ATHvQtRnWts60GQGNHnjBMS5D6dN
+H9DlBLz8dAJim4NQxl7mjRAPcGzqBMSzBDX3QzgPdwJiWJIa27hafQuOKzA+
+nOM+KoPiAX3LScyHOKbyyjVfUqIPezuCY8IadoyT5gYiUaMdiy2fXH2dxPpT
+MRZdUF0bJ0yfym18NGLWd0pRwtpDTV26tue4/lbLthZyQ7K/nLr8WXPtaG82
+lFiPDLFjW8GqDRLalQcd7M0CrnEQzZ1i7BOzLgTl6UyMzRnBWRa98xtJuri/
+5WkvMqa9ISFPhjkazEE07aK9H2LWtpsE2y4khDoF7L42CXqMuG2IsPFbYqyj
+Qfu72H3VSKg7F1Ni3gHsPmol1J3vKQGPgdWZ/ixYd9h9084SdYdzbAbvvZVi
+c411pBRC3Tmf4k8bID73uXyB936UYjNH3iKGBdo1Nl9Am6cpBgvIdU4k2PUj
+xZ9J4J5r9tCGbY0gglnAPT6D93+WYrdkbTL2Oax+gDZPUoyW2qYhwbZPKT41
+Qc+kaNXmA7ftAfaCtJzuOH05adDmI7d9PkK5P+uPvh8KtGndN6FAm3P+6PtB
++7LZ/WhjoN7scdsXsD1pTt3wT+R6SMM/tfUGbH/sj34Q7D4E/Gt9Jl16vQH7
+PvtDHwS7Dz5SLmkiFGjzxR/6INh98FG5Nl/9oW8HPpvJbX+Ivj1G0rUhJsG0
+MW36MKCN6HGaM23YbQwwCRJyaSEGxgLS82nJ2hC4bZ9abShP3gfsPvgYmHtK
+12bXH3o/pJ9vEtBG7PoN2T70R98P6eecKNemtT2OgdR9RA3/fNrsctuXansM
+uPdx9PFPujbjz0F0hfRxdEAbsXs5nGkjWht/5OMguc8JaLPDbZ/H7ixnEHDv
+Twv4qFKbXOcPSM6radUmFPMukDrP0ahN33nNBD9F9jlKtcl67j6N99j96uKn
+VG3C0U4Ct0/qtSl1RpTEHIFp8x/Y/RvzVY02uccA45A2ntakTVyE+0HSmo4W
+bWqdRSgpx6ZFm9jY5oCUuhPQRsRz0qFzq3JDSr8T2MshQpv4qObDUMAdNoF6
+w/58ypDxzoLSbRu2B1hHMS9BnGt8ftJ3ZyT+jO6VbP7+/tdzFWxnvUuidNtW
+8n66kmeNgO4vStndBSX1KXnOMu1BKlWuxKBU31NYm61CNs+WsjkVJfJtffc7
+BOzNrk3t8XIX5B4badJGsi77yFl/CmvzMJedGnTZR64zI3AtHOeQA7qzmz5H
+bo/xjYfbjf+B94TvErPskSpZfkpB+pkefYntt+Y7qCXlRXMSdHmeNVCMkJA/
+yUVNfUssJK5pdyV3HqY0NPZD01hX2oD5Yw0aYV5M4jy/BqTqg2eTaR6D5QTW
+Iwl7R8GGkWnSjuG/O4ir3N1O7Za6+SM3qF/KOr6jPMHI9MgHWv+cwTpFXMdX
+nDsNGmdXYtzxa/w+1UFcO52hvz+Q/brBYDAYDAaDwWAwGAwGHfgNxfKfHA==
+
+                    "], "Byte", ColorSpace -> "RGB", Interleaving -> True], {
+                    20, 20}], 
+                    "Leave this field blank if you wish to save the file with \
+the same name."], 
+                    Spacer[10], 
+                    TextCell["File Name: "], 
+                    InputField[
+                    Dynamic[$CellContext`lvFileName], String], 
+                    Spacer[10], 
+                    Button[
+                    TextCell["Save"], 
+                    If[CloudDirectory[] =!= $CloudRootDirectory, If[
+                    
+                    StringMatchQ[$CellContext`lvFileName, 
+                    ""], $CellContext`lvFileName = Association[
+                    NotebookInformation[$CellContext`lvFileToSave]][
+                    "WindowTitle"]]; If[Length[
+                    Cases[
+                    Information[
+                    CloudObjects[], "DisplayName"], $CellContext`lvFileName]] > 
+                    0, CreateWindow[
+                    DialogNotebook[
+                    Column[{
+                    Item[
+                    TextCell[
+                    "File already exists!", FontFamily -> "Crimson Roman", 
+                    FontColor -> RGBColor["#36384C"]]], 
+                    Item[
+                    TextCell[
+                    "Do you want to overwrite this file?", FontFamily -> 
+                    "Crimson Roman", FontColor -> RGBColor["#36384C"]]], 
+                    Row[{
+                    Item[
+                    Button[
+                    TextCell["Yes"], CloudDeploy[$CellContext`lvFileToSave, 
+                    CloudObject[
+                    ToString[$CellContext`lvFileName]]]; NotebookClose[
+                    EvaluationNotebook[]]; NotebookOpen[
+                    CloudObject[
+                    ToString[$CellContext`lvFileName]]]; 
+                    NotebookClose[$CellContext`lvFileToSave], BaseStyle -> 
+                    RGBColor["#ffffff"], Background -> RGBColor["#36384C"]]], 
+                    Spacer[50], 
+                    Item[
+                    Button[
+                    TextCell["No"], 
+                    NotebookClose[
+                    EvaluationNotebook[]], BaseStyle -> RGBColor["#ffffff"], 
+                    Background -> RGBColor["#36384C"]]]}]}, 
+                    Alignment -> {Center}]], WindowSize -> All, WindowTitle -> 
+                    "Warning", Background -> RGBColor["#ffffff"]]; Null, 
+                    CloudDeploy[$CellContext`lvFileToSave, 
+                    CloudObject[
+                    ToString[$CellContext`lvFileName]]]; DeleteObject[
+                    CloudObject[$CellContext`lvFilePath]]; NotebookClose[
+                    EvaluationNotebook[]]; NotebookOpen[
+                    CloudObject[
+                    ToString[$CellContext`lvFileName]]]; 
+                    NotebookClose[$CellContext`lvFileToSave]]; NotebookClose[
+                    EvaluationNotebook[]]], BaseStyle -> RGBColor["#ffffff"], 
+                    Background -> RGBColor["#36384C"]]}], FontFamily -> 
+                    "Crimson Roman", FontColor -> RGBColor["#36384C"]]}], 
+                    Alignment -> Left], 
+                    TrackedSymbols :> {$CellContext`lvCloudDirectory}]], 
+                    WindowSize -> {400, 265}, WindowTitle -> 
+                    "Save Existing File", TextAlignment -> Center, Background -> 
+                    RGBColor["#ffffff"]], BaseStyle -> RGBColor["#ffffff"], 
+                    Background -> RGBColor["#36384C"]]], 
+                    Spacer[50], 
+                    Item[
+                    Button[
+                    TextCell["No"], 
+                    NotebookClose[
+                    EvaluationNotebook[]], BaseStyle -> RGBColor["#ffffff"], 
+                    Background -> RGBColor["#36384C"]]]}]}, Alignment -> 
+                    Center]], WindowSize -> All, WindowTitle -> "Warning", 
+                    Background -> RGBColor["#ffffff"]], BaseStyle -> 
+                    RGBColor["#ffffff"], Background -> 
+                    RGBColor["#36384C"]]]}]}, Alignment -> {Center}]]], 
+                    WindowSize -> All, WindowTitle -> "Warning", Background -> 
+                    RGBColor["#ffffff"]]; Null]], ImageSize -> 50, BaseStyle -> 
+                  RGBColor[1., 1., 1.], Background -> 
+                  RGBColor[
+                   0.21176470588235294`, 0.2196078431372549, 
+                    0.2980392156862745], Appearance -> Automatic, Evaluator -> 
+                  Automatic, Method -> "Preemptive"], StripOnInput -> False]},
+                "RowDefault"]}}, DefaultBaseStyle -> "Column", 
+            GridBoxAlignment -> {"Columns" -> {{Center}}}, 
+            GridBoxItemSize -> {
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], "Column"],
+           Alignment -> Right, StripOnInput -> False]}}, AutoDelete -> False, 
+       GridBoxItemSize -> {"Columns" -> {{
+            Scaled[
+             Rational[1, 3]]}}}], "Grid"]], CellFrame -> True, CellFrameColor -> 
+    RGBColor[1, 1, 1], Background -> RGBColor[0.921569, 0.92549, 0.929412], 
+    FontFamily -> "Crimson Roman", FontColor -> 
+    RGBColor[0.211765, 0.219608, 0.298039]], 
+   Cell["THIS IS A TEST STYLESHEET", "SBO", 
+    CellMargins -> {{0, 0}, {0, 0}}, FontFamily -> "Crimson Roman", FontSize -> 
+    12, FontSlant -> "Plain", FontColor -> RGBColor[1, 1, 1], TextAlignment -> 
+    Center, Background -> 
+    RGBColor[0.67451, 0.752941, 
+      0.796078]]},ExpressionUUID->"6f52920c-8915-49fa-9768-33ab6f72451f"],
+
+Cell[StyleData["Notebook"],
+ ReturnCreatesNewCell->True,
+ DefaultNewCellStyle->
+  "Code",ExpressionUUID->"fab3928d-9e3c-4232-9922-dc2feb34b420"]
+},
+WindowSize->{1141.2, 646.8},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+FrontEndVersion->"12.1 for Microsoft Windows (64-bit) (July 6, 2020)",
+StyleDefinitions->Notebook[{
+   Cell[
+    StyleData[StyleDefinitions -> "PrivateStylesheetFormatting.nb"]]}, 
+  Visible -> False, FrontEndVersion -> 
+  "12.1 for Microsoft Windows (64-bit) (July 6, 2020)", StyleDefinitions -> 
+  "PrivateStylesheetFormatting.nb"],
+ExpressionUUID->"4742fd50-5815-4a0a-8ee2-1fbdb3ce5cc5"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[1475, 33, 250, 3, 39, 193, 2, "StyleData", "StyleDefinitions", "",ExpressionUUID->"db0d4a6e-538d-42e6-a22d-9e029b795685"],
+Cell[1728, 38, 91092, 1681, 39, 31, 0, "StyleData", "All", "Working",ExpressionUUID->"6f52920c-8915-49fa-9768-33ab6f72451f"],
+Cell[92823, 1721, 144, 3, 39, 27, 0, "StyleData", "Notebook", "All",ExpressionUUID->"fab3928d-9e3c-4232-9922-dc2feb34b420"]
+}
+]
+*)
+
+(* End of internal cache information *)
+
