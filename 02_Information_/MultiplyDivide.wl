@@ -1,6 +1,6 @@
 (* ::Package:: *)
 
-BeginPackage["FA2`"];
+BeginPackage["MultiplyDivide`"];
 
 Begin["Private`"];
 End[];

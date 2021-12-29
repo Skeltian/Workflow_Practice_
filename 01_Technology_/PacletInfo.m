@@ -1,5 +1,7 @@
-Paclet["Name" -> "FA2", "Version" -> "1.0.7", 
+(* ::Package:: *)
+
+Paclet["Name" -> "01Technology", "Version" -> "1.0.7", 
  "Creator" -> "Brandon Sutton <bsutton10294@gmail.com", 
  "Description" -> "Test paclet created for testing Github Action workflow", 
- "Extensions" -> {{"Kernel", "Root" -> ".", "Context" -> {"FA2`"}}, 
+ "Extensions" -> {{"Kernel", "Root" -> ".", "Context" -> {"Technology`"}}, 
    {"FrontEnd"}}]
