@@ -49,6 +49,5 @@ jobs:
       - name: "Create release"
         uses: ncipollo/release-action@v1
         with:
-          repo: "master"
           generateReleaseNotes: true
           tag: ${{ needs.job2.outputs.tag }}
