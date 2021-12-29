@@ -1,0 +1,25 @@
+name: "Deploy release"
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  job:
+    runs-on: [self-hosted]
+    steps:
+      - name: "Checkout my repository"
+        uses: actions/checkout@v2
+        
+      - name: "Create the paclet file"
+        run: |
+          $FILES = @(Get-ChildItem -Path './') | Where-Object {$_ -notlike ".github" -and $_ -notlike "Resources_"};
+          echo $FILES;
+          wolframscript -script "./Resources_/Scripts_/DeployRelease.wls" $FILES
+        
+      - name: "Commit the files"
+        run: |
+          git add *
+          git commit -m "Auto-generated and handled the PacletSite creation"
+          git push -u origin
