@@ -1,6 +1,6 @@
 name: "Paclet Site Generation TEST"
 
-on: [workflow_dispatch]
+on: [push]
 
 jobs:
   job:
