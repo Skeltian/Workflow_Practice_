@@ -3,27 +3,11 @@
 BeginPackage["AddSubtract`"];
 
 cfAdd::usage =
-	"\!\(\*
-StyleBox[\"Usage\",\nFontWeight->\"Bold\"]\)\!\(\*
-StyleBox[\":\",\nFontWeight->\"Bold\"]\)\!\(\*
-StyleBox[\" \",\nFontWeight->\"Bold\"]\)\!\(\*
-StyleBox[\"cfAdd\",\nFontWeight->\"Bold\"]\)\!\(\*
-StyleBox[\"[\",\nFontWeight->\"Bold\"]\)\!\(\*
-StyleBox[\"x\",\nFontWeight->\"Bold\"]\)\!\(\*
-StyleBox[\",\",\nFontWeight->\"Bold\"]\)\!\(\*
-StyleBox[\" \",\nFontWeight->\"Bold\"]\)\!\(\*
-StyleBox[\"y\",\nFontWeight->\"Bold\"]\)\!\(\*
-StyleBox[\"]\",\nFontWeight->\"Bold\"]\)\!\(\*
-StyleBox[\"\\\\n\",\nFontWeight->\"Plain\"]\)\!\(\*
-StyleBox[\"\\\\n\",\nFontWeight->\"Plain\"]\)\!\(\*
-StyleBox[\"\\\\n\",\nFontWeight->\"Plain\"]\)	\!\(\*
-StyleBox[\"Adds\",\nFontWeight->\"Plain\"]\)\!\(\*
-StyleBox[\" \",\nFontWeight->\"Plain\"]\)\!\(\*
-StyleBox[\"two\",\nFontWeight->\"Plain\"]\)\!\(\*
-StyleBox[\" \",\nFontWeight->\"Plain\"]\)\!\(\*
-StyleBox[\"numbers\",\nFontWeight->\"Plain\"]\)\!\(\*
-StyleBox[\" \",\nFontWeight->\"Plain\"]\)\!\(\*
-StyleBox[\"together\",\nFontWeight->\"Plain\"]\)"
+	"USAGE: cfAdd[x, y]\n\n
+	Adds two numbers"
+cfSubtract::usage =
+	"USAGE: cfSubtract[x, y]\n\n
+	Subtracts two numbers"
 
 Begin["Private`"];
 
@@ -31,6 +15,12 @@ cfAdd[x_, y_]:=
 If[NumberQ[x] && NumberQ[y],
 	Return[x + y],
 	Return["Please give two numbers for addition."]
+]
+
+cfSubtract[x_, y_]:=
+If[NumberQ[x] && NumberQ[y],
+	Return[x - y],
+	Return["Please give two numbers for subtraction."]
 ]
 
 End[];
