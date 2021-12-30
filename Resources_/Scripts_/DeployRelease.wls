@@ -4,12 +4,9 @@ argv = Rest @ $ScriptCommandLine;
 Map[
 Module[{lvNewPaclet, lvOldPaclets = FileNames["./" <> # <> "/Paclets/*.paclet"]},
 (
-	(* Move the old paclets to Archived_/ *)
+	(* Delete the old paclet(s) *)
 	If[Length[lvOldPaclets] > 0,
-		Map[
-		RenameFile[#, "./" <> StringSplit[#, "\\"][[2]] <> "/Archived_/" <> Last[StringSplit[#, "\\"]], OverwriteTarget -> True]&,
-		
-		lvOldPaclets]
+		Map[DeleteFile[#]&, lvOldPaclets]
 	];
 	
 	(* Increase the version number (release -> increase the first number) *)
