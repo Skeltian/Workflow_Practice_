@@ -6,7 +6,7 @@ on:
       - master
 
 jobs:
-  job:
+  deployPaclet:
     runs-on: [self-hosted]
     steps:
       - name: "Checkout my repository"
@@ -24,9 +24,9 @@ jobs:
           git commit -m "Auto-generated and handled the PacletSite creation"
           git push -u origin
   
-  job2:
+  createTag:
     runs-on: ubuntu-latest
-    needs: [job]
+    needs: [deployPaclet]
     outputs:
       tag: ${{ steps.tagCreation.outputs.new_tag }}
     steps:
@@ -43,9 +43,9 @@ jobs:
           WITH_V: true
           DEFAULT_BUMP: 'major'
   
-  job3:
+  createRelease:
     runs-on: ubuntu-latest
-    needs: [job2]
+    needs: [createTag]
     steps:
       - name: "Checkout repo"
         uses: actions/checkout@v2
@@ -54,11 +54,11 @@ jobs:
         uses: ncipollo/release-action@v1
         with:
           generateReleaseNotes: true
-          tag: ${{ needs.job2.outputs.tag }}
+          tag: ${{ needs.createTag.outputs.tag }}
   
-  job4:
+  updateMain:
     runs-on: ubuntu-latest
-    needs: [job3]
+    needs: [createRelease]
     steps:
       - name: "Checkout repo"
         uses: actions/checkout@v2
