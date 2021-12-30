@@ -55,6 +55,7 @@ jobs:
         with:
           generateReleaseNotes: true
           tag: ${{ needs.createTag.outputs.tag }}
+          commit: 'master'
   
   updateMain:
     runs-on: ubuntu-latest
