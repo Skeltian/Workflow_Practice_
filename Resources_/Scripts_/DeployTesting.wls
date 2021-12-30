@@ -6,10 +6,14 @@ Module[{lvNewPaclet, lvOldPaclets = FileNames["./" <> # <> "/Paclets/*.paclet"]}
 (
 	(* Move the old paclets to Archived_/ *)
 	If[Length[lvOldPaclets] > 0,
+		(* MAY NOT BE NEEDED ...
 		Map[
 		RenameFile[#, "./" <> StringSplit[#, "\\"][[2]] <> "/Archived_/" <> Last[StringSplit[#, "\\"]], OverwriteTarget -> True]&,
 		
 		lvOldPaclets]
+		*)
+		
+		Map[DeleteFile[#]&, lvOldPaclets]
 	];
 	
 	(* Increase the version number *)
