@@ -1,5 +1,7 @@
 #!/usr/bin/env wolframscript
+(* ::Package:: *)
 
+(* SHOULD NOT BE NEEDED SOON *)
 argv = Rest @ $ScriptCommandLine;
 Map[
 Module[{lvNewPaclet, lvOldPaclets = FileNames["./" <> # <> "/Paclets/*.paclet"]},
