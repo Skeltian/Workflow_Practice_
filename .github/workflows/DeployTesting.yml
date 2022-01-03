@@ -16,7 +16,7 @@ jobs:
         run: |
           $FILES = @(Get-ChildItem -Path './') | Where-Object {$_ -notlike ".github" -and $_ -notlike "Resources_"};
           echo $FILES;
-          wolframscript -script "./Resources_/Scripts_/DeployTesting.wls" $FILES
+          wolframscript -script "./Resources_/Scripts_/DeployPaclets.wls" "patch" $FILES
         
       - name: "Commit the files"
         run: |
