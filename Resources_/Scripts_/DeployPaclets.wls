@@ -13,22 +13,20 @@ Module[{lvNewPaclet, lvOldPaclets = FileNames["./" <> # <> "/Paclets/*.paclet"]}
 	
 	(* Increase the version number (release -> increase the first number) *)
 	Module[
-	    {lvPacletInfo = InputForm[Import["./" <> # <> "/PacletInfo.m"]], lvVersion, lvNewVersion, 
-		lvConversionType = 
+	    {lvPacletInfo = InputForm[Import["./" <> # <> "/PacletInfo.m"]], lvVersion, lvNewVersion},
+		lvVersion = StringReplace[StringSplit[First[StringCases[ToString[lvPacletInfo], "\"Version\"" ~~ __]], {" -> ", ","}][[2]], "\"" -> ""];
+		lvNewVersion = 
 			Which[
 			StringMatchQ[argt, "major", IgnoreCase->True], 
-				1, 
+				StringRiffle[ReplacePart[StringSplit[lvVersion, "."], {1 -> (Interpreter["Number"][StringSplit[lvVersion, "."][[1]]] + 1), 2 -> 0, 3 -> 0}], "."], 
 			StringMatchQ[argt, "minor", IgnoreCase->True], 
-				2, 
+				StringRiffle[ReplacePart[StringSplit[lvVersion, "."], {2 -> (Interpreter["Number"][StringSplit[lvVersion, "."][[2]]] + 1), 3 -> 0}], "."], 
 			StringMatchQ[argt, "patch", IgnoreCase->True], 
-				3, 
+				StringRiffle[ReplacePart[StringSplit[lvVersion, "."], {3 -> (Interpreter["Number"][StringSplit[lvVersion, "."][[3]]] + 1)}], "."], 
 			True, 
 				Print["No valid version conversion indicated (must be \"major\", \"minor\", or \"patch\")"]; 
 				Return[$Failed]
-			]
-		},
-		lvVersion = StringReplace[StringSplit[First[StringCases[ToString[lvPacletInfo], "\"Version\"" ~~ __]], {" -> ", ","}][[2]], "\"" -> ""];
-		lvNewVersion = StringRiffle[ReplacePart[StringSplit[lvVersion, "."], {1 -> (Interpreter["Number"][StringSplit[lvVersion, "."][[1]]] + 1), 3 -> 0}], "."];
+			];
 		Put[ToExpression[StringReplace[ToString[lvPacletInfo], lvVersion -> lvNewVersion]], ("./" <> # <> "/PacletInfo.m")]
 	];
 	
